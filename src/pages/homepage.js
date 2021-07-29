@@ -1,10 +1,12 @@
 import React from 'react';
-
+import IntroRow from './home/introrow';
+import Skills from './home/skills';
+import Projects from './home/projects';
+import Journey from './home/journey';
 function HomePage() {
     return (
         <React.Fragment>
-         
-            <h1 >Home Page</h1>
+         <IntroRow />
         </React.Fragment>
     );
 }
