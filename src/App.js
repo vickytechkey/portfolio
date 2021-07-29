@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import AOS from  'aos/dist/aos';
+import 'aos/dist/aos.css';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import AboutPage from './pages/aboutpage';
+import ContactPage from './pages/contactpage';
+import HomePage from './pages/homepage';
+import ProjectPage from './pages/projectspage';
+import FooterBar from './webcomponents/footer';
+import NavigationBar from './webcomponents/navbar';
 
 function App() {
+  AOS.init();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <NavigationBar />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/contact" component={ContactPage} />
+        <Route exact path="/projects" component={ProjectPage} />
+      </Switch>
+      <FooterBar />
+    </React.Fragment>
   );
 }
 
