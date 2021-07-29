@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   inkscape:export-filename="/home/vignesh/bitmap.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1066"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="16"
+     inkscape:cx="10.21875"
+     inkscape:cy="13.53125"
+     inkscape:window-width="1528"
+     inkscape:window-height="836"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1129" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1061" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#6600ff;fill-opacity:1;stroke:none;stroke-width:0.829321px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1,1 C 1.7225448,-0.5557751 3.4167641,8.300019 6.6382515,9.056051 8.1565097,9.412362 10.628831,1 10.628831,1 10.032504,1 16.264386,17.071474 14.755473,14 11.316605,7 4.3783831,15.819629 4.2360196,14.483677 4.2360196,14.483677 0.45567862,2.1720265 1,1 Z"
+       id="path1189"
+       sodipodi:nodetypes="ssssss"
+       inkscape:export-filename="/home/vignesh/Desktop/websitefinal/assets/icons/icon32.png"
+       inkscape:export-xdpi="192.00002"
+       inkscape:export-ydpi="192.00002" />
+  </g>
+</svg>

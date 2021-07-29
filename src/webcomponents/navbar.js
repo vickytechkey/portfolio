@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import  Logo from '../assets/navbar/logo.svg'
 function NavigationBar() {
     const routes = [
         { 'path': "/", 'label': 'Home' },
@@ -13,9 +14,9 @@ function NavigationBar() {
         <React.Fragment>
             <nav className="z-depth-0" >
     <div className="nav-wrapper white z-depth-0 " >
-      <a href="#" class="brand-logo">Logo</a>
+                    <a Link="/" class="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 25, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
+                        {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
                        
                     </ul>
     </div>
