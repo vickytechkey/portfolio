@@ -6,7 +6,8 @@ import Journey from './home/journey';
 function HomePage() {
     return (
         <React.Fragment>
-         <IntroRow />
+            <IntroRow />
+            <Skills />
         </React.Fragment>
     );
 }
