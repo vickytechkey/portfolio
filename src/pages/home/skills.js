@@ -27,7 +27,8 @@ function Skills() {
                 <PurpleBar/>
                 </div>
                 <div className="col xl4 l4 m11 s11">
-                <h5 data-aos="fade-left" style={{marginLeft:-60 , marginTop:0,fontFamily: ['Poppins', 'sans-serif']}} className="justify-align">Started my journey towards my passion before three years now looking forward for an oppurtunity to give life to my dreams</h5>
+                    <h5 data-aos="fade-left" style={{ marginLeft: 0, marginTop: 0, fontFamily: ['Poppins', 'sans-serif'] }} className="justify-align hide-on-med-and-up">Started my journey towards my passion before three years now looking forward for an oppurtunity to give life to my dreams</h5>
+                    <h5 data-aos="fade-left" style={{marginLeft:-60 , marginTop:0,fontFamily: ['Poppins', 'sans-serif']}} className="justify-align hide-on-med-and-down">Started my journey towards my passion before three years now looking forward for an oppurtunity to give life to my dreams</h5>
                 </div>
             </div>
            
