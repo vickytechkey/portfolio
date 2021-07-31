@@ -1,9 +1,13 @@
 import React from 'react';
-
+import Rowone from './aboutpage/rowone';
+import RowTwo from './aboutpage/rowtwo';
+import RowThree from './aboutpage/rowthree';
 function AboutPage() {
     return (
         <React.Fragment>
-            <h1>About Page</h1>
+            <Rowone />
+            <RowTwo />
+            <RowThree />
         </React.Fragment>
     );
 }

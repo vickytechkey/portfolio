@@ -14,8 +14,8 @@ function NavigationBar() {
         <React.Fragment>
             <nav className="z-depth-0" >
     <div className="nav-wrapper white z-depth-0 " >
-                    <a Link="/" class="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
                         {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
                        
                     </ul>

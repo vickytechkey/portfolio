@@ -6,7 +6,7 @@ import Java from '../../assets/homepage/skills/java.svg';
 import NodeJs from '../../assets/homepage/skills/nodejs.svg';
 import Python from '../../assets/homepage/skills/python.svg';
 import ReactJs from '../../assets/homepage/skills/reactjs.svg';
-import PurpleBar from './purplebar';
+import {PurpleBar} from '../home/purplebar'
 function Skills() {
     const logos = [Angular,Csharp,Flutter,Java,NodeJs,Python,ReactJs];
     return (
