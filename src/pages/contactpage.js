@@ -96,7 +96,7 @@ function ContactPage() {
           </div>
         </form> : ""}
         
-        { submitstate.showpreloader === true ? <div className="center-align">
+        { submitstate.showpreloader === true ? <div className="center-align row">
           <PreLoader />
           <h4  style={{fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
 Sending message

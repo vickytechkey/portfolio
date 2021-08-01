@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import  Logo from '../assets/navbar/logo.svg'
+import Logo from '../assets/navbar/logo.svg'
+import M from 'materialize-css';
 function NavigationBar() {
+  M.AutoInit();
     const routes = [
         { 'path': "/", 'label': 'Home' },
         { 'path': "/projects", 'label': 'My works' },
@@ -17,10 +19,14 @@ function NavigationBar() {
                     <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                       
+                        <li><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
+                        <li><Link className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
+                        
                     </ul>
-    </div>
-  </nav>
+          </div>
+         
+        </nav>
+      
         </React.Fragment>
     );
 }

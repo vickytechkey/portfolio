@@ -23,7 +23,8 @@ function FooterBar() {
                 <h5 className="white-text" style={{ fontSize: 35, fontFamily: ['Poppins', 'sans-serif'] }}> Quick Links</h5>
                 <ul>
                 {routes.map((element, index) => <li key={index}><Link className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-              
+                <li><Link className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
+                        <li><Link className="white-text hvr-underline-from-right-white " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
                 </ul>
               </div>
             </div>
