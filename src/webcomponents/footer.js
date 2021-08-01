@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function FooterBar() {
     const routes = [
         { 'path': "/", 'label': 'Home' },
-        { 'path': "/projects", 'label': 'My works' },
+        // { 'path': "/projects", 'label': 'My works' },
         { 'path': "/about", 'label': 'About myself' },
         { 'path': "/contact", 'label': 'Say Hello' },
         
