@@ -1,14 +1,14 @@
 import React from 'react';
 import Angular from '../../assets/homepage/skills/angular.svg';
-import Csharp from '../../assets/homepage/skills/csharp.svg';
+// import Csharp from '../../assets/homepage/skills/csharp.svg';
 import Flutter from '../../assets/homepage/skills/flutter.svg';
-import Java from '../../assets/homepage/skills/java.svg';
+// import Java from '../../assets/homepage/skills/java.svg';
 import NodeJs from '../../assets/homepage/skills/nodejs.svg';
-import Python from '../../assets/homepage/skills/python.svg';
+// import Python from '../../assets/homepage/skills/python.svg';
 import ReactJs from '../../assets/homepage/skills/reactjs.svg';
 import {PurpleBar} from '../home/purplebar'
 function Skills() {
-    const logos = [Angular,Csharp,Flutter,Java,NodeJs,Python,ReactJs];
+    const logos = [Angular,Flutter,NodeJs,ReactJs];
     return (
         <React.Fragment>
          <div className="row center-align">
@@ -16,7 +16,7 @@ function Skills() {
                 <div className="col s12 m12 xl12 l12">
                 <h3 data-aos="zoom-in" style={{ paddingBottom: 30, fontWeight: 600, fontFamily: ['Poppins', 'sans-serif'] }}>I'm good at</h3>
                 </div>
-                {logos.map((element,index)=> <div key={index} className="col xl2 l2 s12 m12">
+                {logos.map((element,index)=> <div key={index} className="col xl3 l3 s12 m12 center-align">
                     <img data-aos-delay="500" data-aos="zoom-in-up" src={element} alt={element} className="responsive-img" style={{width:100}} />
                 </div>)}
                
