@@ -3,8 +3,17 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/navbar/logo.svg'
 import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
+
 function NavigationBar() {
-  M.AutoInit();
+    
+    
+  
+   function trigger() {
+        let sidenav = document.querySelector('#slide-out');
+       M.Sidenav.init(sidenav, {});
+       console.log("clicked")
+     }
+  
     const routes = [
         { 'path': "/", 'label': 'Home' },
         // { 'path': "/projects", 'label': 'My works' },
@@ -25,7 +34,7 @@ function NavigationBar() {
                         
                     </ul>
           </div>
-          <a href="!#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons black-text">menu</i></a>
+          <a href="#" onClick={trigger} data-target="slide-out" className="sidenav-trigger"><i className="material-icons black-text">menu</i></a>
         </nav>
         <ul id="slide-out" className="sidenav">
     <li><div className="user-view">
