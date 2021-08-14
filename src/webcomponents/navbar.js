@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/navbar/logo.svg'
+import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
 function NavigationBar() {
   M.AutoInit();
@@ -18,15 +19,28 @@ function NavigationBar() {
     <div className="nav-wrapper white z-depth-0 " >
                     <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
-                        <li><Link className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
+                        {routes.map((element, index) => <li key={index}><Link className="black-text" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
+                        <li><Link className="black-text" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
+                        <li><Link className="black-text" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
                         
                     </ul>
           </div>
-         
+          <a href="!#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons black-text">menu</i></a>
         </nav>
-      
+        <ul id="slide-out" className="sidenav">
+    <li><div className="user-view">
+      <div className="background">
+        <img src={Backgroundtexture} alt={Backgroundtexture} />
+      </div>
+      <a href="#user"><img className="circle" src={Logo} alt={Logo} /></a>
+      <a href="#name"><span className="black-text name">Vignesh</span></a>
+      <a href="#email"><span className="black-text email">vichunice@gmail.com</span></a>
+    </div></li>
+    {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
+                        <li><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
+                        <li><Link className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
+  </ul>
+ 
         </React.Fragment>
     );
 }
