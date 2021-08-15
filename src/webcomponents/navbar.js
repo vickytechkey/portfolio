@@ -3,10 +3,28 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/navbar/logo.svg'
 import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
-
+const firebase = require("firebase");
+require("firebase/firestore");
 function NavigationBar() {
     
+    const firebaseConfig = {
+        apiKey: "AIzaSyCbNRhYBErmJq_Yxl7uaV8Wd3ViGJaYcaM",
+        authDomain: "vigneshexplorations.firebaseapp.com",
+        projectId: "vigneshexplorations",
+        storageBucket: "vigneshexplorations.appspot.com",
+        messagingSenderId: "1061942842544",
+        appId: "1:1061942842544:web:cc0a41c1a4a58e9abb9775",
+        measurementId: "G-1JG82313DL"
+      };
     
+      if (!firebase.default.apps.length) {
+        firebase.default.initializeApp(firebaseConfig);
+      }
+    
+      var storage = firebase.default.storage();
+    storage.refFromURL("gs://vigneshexplorations.appspot.com/CV-web.pdf").getDownloadURL().then((res) => {
+        console.log(res);
+      })
   
    function trigger() {
         let sidenav = document.querySelector('#slide-out');
@@ -28,9 +46,9 @@ function NavigationBar() {
     <div className="nav-wrapper white z-depth-0 " >
                     <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        {routes.map((element, index) => <li key={index}><Link className="black-text" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><Link className="black-text" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
-                        <li><Link className="black-text" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
+                        {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
                         
                     </ul>
           </div>
@@ -46,8 +64,8 @@ function NavigationBar() {
       <a href="#email"><span className="black-text email">vichunice@gmail.com</span></a>
     </div></li>
     {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/resume">Resume</Link></li>
-                        <li><Link className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to="/cv">curriculum vitae</Link></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
   </ul>
  
         </React.Fragment>
