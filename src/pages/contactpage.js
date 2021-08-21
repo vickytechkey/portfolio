@@ -96,14 +96,15 @@ function ContactPage() {
           </div>
         </form> : ""}
         
-        { submitstate.showpreloader === true ? <div className="center-align row">
-          <PreLoader />
-          <h4  style={{fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
+        { submitstate.showpreloader === true ? <div style={{marginTop:'150px',marginBottom:'150px'}}>
+          
+          <h4 className="center-align" style={{ fontSize: 20, lineHeight: 1.6, fontFamily: ['Poppins', 'sans-serif'] }}>
+          <PreLoader /> <br/>
 Sending message
           </h4>
         </div> : ''}
-        { submitstate.showmessage === true ?    <div className="center-align">
-        <h4 data-aos="zoom-in-left" style={{fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
+        { submitstate.showmessage === true ?    <div style={{marginTop:'150px',marginBottom:'150px'}} >
+        <h4 className="center-align" data-aos="zoom-in-left" style={{fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
 Thank you  for contacting us we will get back to you soon
           </h4>
         </div> : ''}

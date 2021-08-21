@@ -4,7 +4,7 @@ import  EducationImage from '../../assets/about/education.png'
 function RowTwo() {
     return (
         <React.Fragment>
-            <div className="row"  data-aos="fade-left">
+            <div className="row"  data-aos="zoom-in-up">
                 <div className="left col xl1 l1 s1 m1" style={{marginLeft:0}}>
                     <PurpleBarC height="70px" />
                   
@@ -23,7 +23,7 @@ function RowTwo() {
                     <img src={EducationImage } alt={EducationImage } className="responsive-img" style={{width:'500px'}} />
                 </div>
                 <div className="col xl6 l6 s12 m12">
-                    <div className="row" data-aos="fade-up-left" data-aos-delay="300">
+                    <div className="row" data-aos="zoom-in-up" data-aos-delay="300">
                         <div className="col xl1 l1 s12 m12">
                         <i className="material-icons Large deep-purple-text darken-4" style={{fontSize:40}}>account_balance</i>
                         </div>
@@ -32,7 +32,7 @@ function RowTwo() {
                         </div>
                     </div>
                     {/* ends */}
-                    <div className="row" data-aos="fade-up-left" data-aos-delay="600">
+                    <div className="row" data-aos="zoom-in-up" data-aos-delay="600">
                         <div className="col xl1 l1 s12 m12">
                         <i className="material-icons Large  deep-purple-text darken-4" style={{fontSize:40}}>school</i>
                         </div>

@@ -4,7 +4,7 @@ import WorkImage from '../../assets/about/work.jpg'
 function RowThree() {
     return (
         <React.Fragment>
-           <div className="row" data-aos="fade-right">
+           <div className="row" data-aos="zoom-in-up">
                <div className="col offset-xl8 offset-l8 s1 m1 xl1 l1">
                    <PurpleBarC height="50px" />
                 </div>
@@ -17,7 +17,7 @@ function RowThree() {
             </div>
             <div className="row">
                 <div className="col xl6 l6 s12 m12 " style={{marginTop:75}}>
-                <div className="row" data-aos="fade-up-left" data-aos-delay="300">
+                <div className="row" data-aos="zoom-in-up" data-aos-delay="300">
                         <div className="col xl1 l1 s12 m12">
                         <i className="material-icons Large deep-purple-text darken-4" style={{fontSize:40}}>work</i>
                         </div>
@@ -26,7 +26,7 @@ function RowThree() {
                         </div>
                     </div>
                     {/* ends */}
-                    <div className="row" data-aos="fade-up-left" data-aos-delay="600">
+                    <div className="row" data-aos="zoom-in-up" data-aos-delay="600">
                         <div className="col xl1 l1 s12 m12">
                         <i className="material-icons Large  deep-purple-text darken-4" style={{fontSize:40}}>work</i>
                         </div>

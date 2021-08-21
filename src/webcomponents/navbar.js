@@ -21,15 +21,15 @@ function NavigationBar() {
         firebase.default.initializeApp(firebaseConfig);
       }
     
-      var storage = firebase.default.storage();
-    storage.refFromURL("gs://vigneshexplorations.appspot.com/CV-web.pdf").getDownloadURL().then((res) => {
-        console.log(res);
-      })
+    //   var storage = firebase.default.storage();
+    // storage.refFromURL("gs://vigneshexplorations.appspot.com/CV-web.pdf").getDownloadURL().then((res) => {
+    //     console.log(res);
+    //   })
   
    function trigger() {
         let sidenav = document.querySelector('#slide-out');
        M.Sidenav.init(sidenav, {});
-       console.log("clicked")
+      //  console.log("clicked")
      }
   
     const routes = [

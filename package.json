@@ -37,11 +37,12 @@
   },
   "devDependencies": {
     "aos": "^2.3.4",
-    "firebase": "^8.8.1",
+    "firebase": "^8.9.1",
     "hover.css": "^2.3.2",
     "jquery": "^3.6.0",
     "materialize-css": "^1.0.0-rc.2",
     "react-materialize": "^3.9.8",
+    "react-qr-code": "^2.0.1",
     "react-router-dom": "^5.2.0"
   }
 }
