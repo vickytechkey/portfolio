@@ -47,8 +47,8 @@ function NavigationBar() {
                     <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
                         
                     </ul>
           </div>
@@ -64,8 +64,8 @@ function NavigationBar() {
       <a href="#email"><span className="black-text email">vichunice@gmail.com</span></a>
     </div></li>
     {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
   </ul>
  
         </React.Fragment>
