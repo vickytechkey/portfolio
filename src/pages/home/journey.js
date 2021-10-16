@@ -45,6 +45,18 @@ function Journey() {
                 </div>
             </div>
              {/* journey two ends */}
+                {/* journey three starts */}
+            <div className="row" data-aos="fade-left">
+                <div className="col xl1 l1 s12 m12">
+                    <img src={amazonlogo} alt={amazonlogo} style={{width:"200px"}} className="responsive-img" />
+
+                </div>
+                <div className="col xl4 l4 s12 m12">
+                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>From October 2021 I had started my career as support engineer in amazon music team </p>
+
+                </div>
+            </div>
+            {/* journey three ends */}
         </React.Fragment>
     );
 }
