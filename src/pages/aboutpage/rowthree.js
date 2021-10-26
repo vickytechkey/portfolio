@@ -21,8 +21,17 @@ function RowThree() {
                         <div className="col xl1 l1 s12 m12">
                         <i className="material-icons Large deep-purple-text darken-4" style={{fontSize:40}}>work</i>
                         </div>
+                        <div className="col xl9 l9 s12 m12" style={{marginTop:-30}}>
+                        <h5 style={{fontSize : 20 , lineHeight : 3.6 , fontFamily: ['Poppins', 'sans-serif']}}>Amazon software support engineer-present</h5>
+                        </div>
+                    </div>
+                    {/* ends */}
+                <div className="row" data-aos="zoom-in-up" data-aos-delay="300">
+                        <div className="col xl1 l1 s12 m12">
+                        <i className="material-icons Large deep-purple-text darken-4" style={{fontSize:40}}>work</i>
+                        </div>
                         <div className="col xl6 l6 s12 m12" style={{marginTop:-30}}>
-                        <h5 style={{fontSize : 20 , lineHeight : 3.6 , fontFamily: ['Poppins', 'sans-serif']}}>Amazon CSA - 2018</h5>
+                        <h5 style={{fontSize : 20 , lineHeight : 3.6 , fontFamily: ['Poppins', 'sans-serif']}}>Amazon Resolution Specalist - 2020 </h5>
                         </div>
                     </div>
                     {/* ends */}
@@ -31,7 +40,7 @@ function RowThree() {
                         <i className="material-icons Large  deep-purple-text darken-4" style={{fontSize:40}}>work</i>
                         </div>
                         <div className="col xl6 l6 s12 m12" style={{marginTop:-30}}>
-                        <h5 style={{fontSize : 20 , lineHeight : 3.6 , fontFamily: ['Poppins', 'sans-serif']}}>Amazon Resolution Specalist - 2020</h5>
+                        <h5 style={{fontSize : 20 , lineHeight : 3.6 , fontFamily: ['Poppins', 'sans-serif']}}>Amazon CSA - 2018</h5>
                         </div>
                        </div>
                 </div>
