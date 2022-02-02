@@ -1,28 +1,15 @@
 import React , {useRef , useState} from 'react';
 import asset from '../assets/contact/asset2.png';
 import PreLoader from '../webcomponents/preloader'
-const firebase = require("firebase");
-require("firebase/firestore");
+
 
 function ContactPage() {
 
   const [submitstate, updatesubmitstate] = useState({"showform" : true , "showpreloader" : false, "showmessage" : false});
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCbNRhYBErmJq_Yxl7uaV8Wd3ViGJaYcaM",
-    authDomain: "vigneshexplorations.firebaseapp.com",
-    projectId: "vigneshexplorations",
-    storageBucket: "vigneshexplorations.appspot.com",
-    messagingSenderId: "1061942842544",
-    appId: "1:1061942842544:web:cc0a41c1a4a58e9abb9775",
-    measurementId: "G-1JG82313DL"
-  };
 
-  if (!firebase.default.apps.length) {
-    firebase.default.initializeApp(firebaseConfig);
-  }
 
-  var db = firebase.default.firestore();
+
 
 
   var name = useRef();
@@ -35,17 +22,7 @@ function ContactPage() {
       return { ...prevstate, "showform" : false, "showpreloader" : true }
     })
     event.preventDefault();
-    db.collection("WebsiteQueries").add(
-      {
-        "name": name.current.value,
-        "subject": subject.current.value,
-        "email": email.current.value,
-        "query" : query.current.value
-      }).then((e) => {
-        updatesubmitstate((prevstate) => {
-          return { ...prevstate, "showmessage" : true, "showpreloader" : false }
-        })
-      });
+   
   }
 
 

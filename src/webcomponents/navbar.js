@@ -3,23 +3,12 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/navbar/logo.svg'
 import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
-const firebase = require("firebase");
-require("firebase/firestore");
+
 function NavigationBar() {
     
-    const firebaseConfig = {
-        apiKey: "AIzaSyCbNRhYBErmJq_Yxl7uaV8Wd3ViGJaYcaM",
-        authDomain: "vigneshexplorations.firebaseapp.com",
-        projectId: "vigneshexplorations",
-        storageBucket: "vigneshexplorations.appspot.com",
-        messagingSenderId: "1061942842544",
-        appId: "1:1061942842544:web:cc0a41c1a4a58e9abb9775",
-        measurementId: "G-1JG82313DL"
-      };
+
     
-      if (!firebase.default.apps.length) {
-        firebase.default.initializeApp(firebaseConfig);
-      }
+     
     
     //   var storage = firebase.default.storage();
     // storage.refFromURL("gs://vigneshexplorations.appspot.com/CV-web.pdf").getDownloadURL().then((res) => {

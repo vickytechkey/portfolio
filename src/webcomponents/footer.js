@@ -1,5 +1,5 @@
 import React from 'react';
-import footerbackground from '../../src/assets/footer/footerbackground.svg';
+import footerbackground from '../../src/assets/footer/footerbackground.png';
 import { Link } from 'react-router-dom';
 function FooterBar() {
     const routes = [
