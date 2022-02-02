@@ -8,7 +8,6 @@ import HomePage from './pages/homepage';
 import ProjectPage from './pages/projectspage';
 import FooterBar from './webcomponents/footer';
 import NavigationBar from './webcomponents/navbar';
-import  LoginPage from './pages/login/loginpage';
 // import CVcomp from './pages/downloadspages/curriculumvitae';
 // import ResumeComp from './pages/downloadspages/resume';
 
@@ -22,7 +21,6 @@ function App() {
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/contact" component={ContactPage} />
         <Route exact path="/projects" component={ProjectPage} />
-        <Route exact path="/login" component={LoginPage} /> 
         {/* <Route exact path="/cv" component={CVcomp} />
         <Route exact path="/resume" component={ResumeComp} /> */}
        
