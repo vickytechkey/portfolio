@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React , {useRef , useState} from 'react';
 import asset from '../assets/contact/asset2.png';
 import PreLoader from '../webcomponents/preloader'
@@ -7,12 +8,7 @@ function ContactPage() {
 
   const [submitstate, updatesubmitstate] = useState({"showform" : true , "showpreloader" : false, "showmessage" : false});
 
-
-
-
-
-
-  var name = useRef();
+var name = useRef();
   var email = useRef();
   var subject = useRef();
   var query = useRef();
@@ -22,7 +18,17 @@ function ContactPage() {
       return { ...prevstate, "showform" : false, "showpreloader" : true }
     })
     event.preventDefault();
-   
+  const postdatas = {"name":name.current.value,"subject":subject.current.value,"query":query.current.value,"emailaddress":email.current.value};
+  let data = JSON.stringify(postdatas);
+  axios.post("http://vignesh.co.in/php/contactuspage/storinguserqueries.php",data).then((response)=>{
+    // console.log(response.data);
+    if(response.data==="success"){
+      updatesubmitstate((prevstate) => {
+        return { ...prevstate, "showform" : false, "showpreloader" : false , "showmessage" : true }
+      })
+    }
+
+  });
   }
 
 
