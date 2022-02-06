@@ -8,8 +8,6 @@ import HomePage from './pages/homepage';
 import ProjectPage from './pages/projectspage';
 import FooterBar from './webcomponents/footer';
 import NavigationBar from './webcomponents/navbar';
-// import CVcomp from './pages/downloadspages/curriculumvitae';
-// import ResumeComp from './pages/downloadspages/resume';
 
 function App() {
   AOS.init();
@@ -23,8 +21,6 @@ function App() {
         <Route  path="/about" element={<AboutPage/>} />
         <Route  path="/contact" element={<ContactPage/>} />
         <Route  path="/projects" element={<ProjectPage/>} />
-        {/* <Route exact path="/cv" component={CVcomp} />
-        <Route exact path="/resume" component={ResumeComp} /> */}
         </Routes>
      
     

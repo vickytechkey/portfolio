@@ -5,15 +5,7 @@ import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
 
 function NavigationBar() {
-    
-
-    
-     
-    
-    //   var storage = firebase.default.storage();
-    // storage.refFromURL("gs://vigneshexplorations.appspot.com/CV-web.pdf").getDownloadURL().then((res) => {
-    //     console.log(res);
-    //   })
+  
   
    function trigger() {
         let sidenav = document.querySelector('#slide-out');
@@ -36,8 +28,8 @@ function NavigationBar() {
                     <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vignesh.co.in/php/files/resume/Resume.pdf">Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vignesh.co.in/php/files/curriculmvitae/CV.pdf">curriculum vitae</a></li>
                         
                     </ul>
           </div>

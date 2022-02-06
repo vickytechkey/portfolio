@@ -44,5 +44,5 @@
     "jquery": "^3.6.0",
     "react-router-dom": "^6.2.1"
   },
-  "proxy":"http://localhost:80"
-    } 
+  "proxy": "http://localhost:80"
+}
