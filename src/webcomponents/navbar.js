@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/navbar/logo.svg'
 import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
-
+import NavBarurlPhpbuilder from '../pages/urlbuilder/urlbuilder';
 function NavigationBar() {
   
+
+ let urlprefix =  NavBarurlPhpbuilder();
+ let resumeurl = `${urlprefix}php/files/resume/Resume.pdf`;
+ let cvurl = `${urlprefix}php/files/curriculmvitae/CV.pdf`
   
    function trigger() {
         let sidenav = document.querySelector('#slide-out');
@@ -28,8 +32,8 @@ function NavigationBar() {
                     <Link to="/" className="brand-logo"><img src={Logo} alt={Logo} className="responsive-img" style={{width:'80px'}} /></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vignesh.co.in/php/files/resume/Resume.pdf">Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vignesh.co.in/php/files/curriculmvitae/CV.pdf">curriculum vitae</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={resumeurl} >Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li>
                         
                     </ul>
           </div>
@@ -45,8 +49,8 @@ function NavigationBar() {
       <a href="#email"><span className="black-text email">vichunice@gmail.com</span></a>
     </div></li>
     {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vignesh.co.in/php/files/resume/Resume.pdf">Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="https://vignesh.co.in/php/files/curriculmvitae/CV.pdf">curriculum vitae</a></li>
+                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }}  href={resumeurl} >Resume</a></li>
+                        <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li>
   </ul>
  
         </React.Fragment>
