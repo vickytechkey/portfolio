@@ -20,7 +20,7 @@ var name = useRef();
     event.preventDefault();
   const postdatas = {"name":name.current.value,"subject":subject.current.value,"query":query.current.value,"emailaddress":email.current.value};
   let data = JSON.stringify(postdatas);
-  axios.post("http://vignesh.co.in/php/contactuspage/storinguserqueries.php",data).then((response)=>{
+  axios.post("https://vignesh.co.in/php/contactuspage/storinguserqueries.php",data).then((response)=>{
     // console.log(response.data);
     if(response.data==="success"){
       updatesubmitstate((prevstate) => {
