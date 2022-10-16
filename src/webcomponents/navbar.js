@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/navbar/logo.svg'
 import Backgroundtexture from '../assets/navbar/listviewbackground.jpg'
 import M from 'materialize-css';
-import NavBarurlPhpbuilder from '../pages/urlbuilder/urlbuilder';
+import AppConfiguration from '../configuration/mainconfiguration'
 function NavigationBar() {
   
-
- let urlprefix =  NavBarurlPhpbuilder();
- let resumeurl = `${urlprefix}php/files/resume/Resume.pdf`;
- let cvurl = `${urlprefix}php/files/curriculmvitae/CV.pdf`
+let appconfig = new AppConfiguration();
+ 
+ let resumeurl = appconfig.Resumeurl.toString()
+ let cvurl = appconfig.CVurls.toString()
   
    function trigger() {
         let sidenav = document.querySelector('#slide-out');

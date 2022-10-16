@@ -9,6 +9,7 @@ import ProjectPage from './pages/projectspage';
 import FooterBar from './webcomponents/footer';
 import NavigationBar from './webcomponents/navbar';
 
+
 function App() {
   AOS.init();
   return (

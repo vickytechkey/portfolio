@@ -1,7 +1,10 @@
 import React from 'react';
 import footerbackground from '../../src/assets/footer/footerbackground.png';
 import { Link } from 'react-router-dom';
+import AppConfiguration from '../configuration/mainconfiguration'
 function FooterBar() {
+  let appconfig = new AppConfiguration()
+
     const routes = [
         { 'path': "/", 'label': 'Home' },
         // { 'path': "/projects", 'label': 'My works' },
@@ -23,8 +26,8 @@ function FooterBar() {
                 <h5 className="white-text" style={{ fontSize: 35, fontFamily: ['Poppins', 'sans-serif'] }}> Quick Links</h5>
                 <ul>
                 {routes.map((element, index) => <li key={index}><Link className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
-                <li><a className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/Resume.pdf">Resume</a></li>
-                        <li><a className="white-text hvr-underline-from-right-white " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href="http://vigneshexplorations.epizy.com/downloads/assets/CV-web.pdf">curriculum vitae</a></li>
+                <li><a className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={appconfig.Resumeurl}>Resume</a></li>
+                        <li><a className="white-text hvr-underline-from-right-white " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={appconfig.CVurls}>curriculum vitae</a></li>
                 </ul>
               </div>
             </div>
