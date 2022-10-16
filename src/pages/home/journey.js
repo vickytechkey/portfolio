@@ -17,46 +17,20 @@ function Journey() {
                 <h1 style={{ marginTop : -55,marginLeft : -15 , fontSize : 45 , lineHeight : 3.6 , fontFamily: ['Poppins', 'sans-serif']}}>My Journey</h1>
                 </div>
             </div>
-            {/* journey one starts */}
+
+     
+                {/* journey one starts */}
             <div className="row" data-aos="fade-left">
                 <div className="col xl1 l1 s12 m12">
                     <img src={amazonlogo} alt={amazonlogo} style={{width:"200px"}} className="responsive-img" />
 
                 </div>
                 <div className="col xl4 l4 s12 m12">
-                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>I started my carrier in amazon as customer service associate in retail for united states customer in 2018</p>
+                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>From October 2020 I had started my career as support engineer in amazon music team </p>
 
                 </div>
             </div>
             {/* journey one ends */}
-                 {/* journey two starts */}
-            <div className="row" data-aos="fade-right">
-            <div className="col xl7 l7 s12 m12"> </div>
-                   
-
-               
-                <div className="col xl1 l1 s12 m12">
-                    <img src={amazonlogo} alt={amazonlogo} style={{width:"200px"}} className="responsive-img" />
-
-                </div>
-                <div className="col xl4 l4 s12 m12">
-                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>After 2 years I got an oppurtunity as interim resolution specalist and which give me oppurtunity to learn the business logics of various sectors in amazon other than retail</p>
-
-                </div>
-            </div>
-             {/* journey two ends */}
-                {/* journey three starts */}
-            <div className="row" data-aos="fade-left">
-                <div className="col xl1 l1 s12 m12">
-                    <img src={amazonlogo} alt={amazonlogo} style={{width:"200px"}} className="responsive-img" />
-
-                </div>
-                <div className="col xl4 l4 s12 m12">
-                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>From October 2021 I had started my career as support engineer in amazon music team </p>
-
-                </div>
-            </div>
-            {/* journey three ends */}
         </React.Fragment>
     );
 }
