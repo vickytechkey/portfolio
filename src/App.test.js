@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
-
+import HomePage from './pages/homepage'
+import AboutPage from './pages/aboutpage';
+import ContactPage from './pages/contactpage';
+import ProjectPage from './pages/projectspage';
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  render(<HomePage url="/" />)
+  render(<AboutPage url="/about" />)
+  render(<ContactPage url="/contact" />)
+  render(<ProjectPage url="/projects" />)
+  
+ 
 });
