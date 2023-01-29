@@ -7,7 +7,6 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.12.1",
     "materialize-css": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy" : "firebase deploy"
+    "deploy": "firebase deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -40,11 +39,15 @@
     ]
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/dom": "^8.19.0",
     "aos": "^2.3.4",
     "axios": "^0.25.0",
+    "firebase": "^9.16.0",
     "hover.css": "^2.3.2",
     "jquery": "^3.6.0",
+    "randomstring": "^1.2.3",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.2.1"
   },
   "proxy": "http://localhost:80"

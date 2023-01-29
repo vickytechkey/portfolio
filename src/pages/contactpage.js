@@ -1,10 +1,18 @@
-import axios from 'axios';
 import React , {useRef , useState} from 'react';
 import asset from '../assets/contact/asset2.png';
 import PreLoader from '../webcomponents/preloader'
+import { doc, setDoc , getFirestore } from 'firebase/firestore';
+import AppConfiguration from '../configuration/mainconfiguration';
+import { initializeApp } from "firebase/app";
 
 
 function ContactPage() {
+
+  var randomstring = require("randomstring");
+
+
+const appconfig = new AppConfiguration();
+const app = initializeApp(appconfig.firebaseHostConfig);
 
   const [submitstate, updatesubmitstate] = useState({"showform" : true , "showpreloader" : false, "showmessage" : false});
 
@@ -13,22 +21,22 @@ var name = useRef();
   var subject = useRef();
   var query = useRef();
 
-  function formsubmit(event) {
+  async function formsubmit(event) {
+    const db = getFirestore(app);
+    let rndstr = randomstring.generate();
     updatesubmitstate((prevstate) => {
       return { ...prevstate, "showform" : false, "showpreloader" : true }
     })
     event.preventDefault();
-  const postdatas = {"name":name.current.value,"subject":subject.current.value,"query":query.current.value,"emailaddress":email.current.value};
-  let data = JSON.stringify(postdatas);
-  axios.post("https://vignesh.co.in/php/contactuspage/storinguserqueries.php",data).then((response)=>{
-    // console.log(response.data);
-    if(response.data==="success"){
-      updatesubmitstate((prevstate) => {
-        return { ...prevstate, "showform" : false, "showpreloader" : false , "showmessage" : true }
-      })
-    }
+  const postdatas = {name:name.current.value,subject:subject.current.value,query:query.current.value,emailaddress:email.current.value};
+  
+  //saving details in database
+  await setDoc(doc(db, "userqueriesfromwebsite", rndstr), postdatas);
+  updatesubmitstate((prevstate) => {
+    return { ...prevstate,"showpreloader" : false,"showmessage" : true }
+  })
+  //saving details in database
 
-  });
   }
 
 
@@ -73,7 +81,7 @@ var name = useRef();
                     </div>
                     {/* query ends  */}
                     <div className="row  center-align">
-                    <button type="submit" className="waves-effect  deep-purple darken-4 btn">Send Email</button>
+                    <button type="button" onClick={(e)=>formsubmit(e)} className="waves-effect  deep-purple darken-4 btn">Send Email</button>
                     </div>
              </div>
           </div>

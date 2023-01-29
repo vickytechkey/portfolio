@@ -7,6 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import AppConfiguration from './configuration/mainconfiguration';
 import 'hover.css/css/hover.css';
+// import { Provider } from 'react-redux'
+// import store from './store'
 
 const appconfig = new AppConfiguration();
 const app = initializeApp(appconfig.firebaseHostConfig);
@@ -14,8 +16,13 @@ const app = initializeApp(appconfig.firebaseHostConfig);
 ReactDOM.render(
 
   <BrowserRouter>
+
     <App />
-  </BrowserRouter>,
+   
+  </BrowserRouter>
+
+  
+  ,
   document.getElementById('root')
 );
 

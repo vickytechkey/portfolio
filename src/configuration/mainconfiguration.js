@@ -7,13 +7,13 @@ export default class AppConfiguration {
       Resumeurl = resume
       CVurls = cv
        firebaseHostConfig = {
-        apiKey: "AIzaSyDgXcikGZMg1ZEjUpdW-MNU_1RTzZhbjqQ",
-  authDomain: "betaportfolio-1686d.firebaseapp.com",
-  projectId: "betaportfolio-1686d",
-  storageBucket: "betaportfolio-1686d.appspot.com",
-  messagingSenderId: "413750985602",
-  appId: "1:413750985602:web:ccc44f152d0158b19e859b",
-  measurementId: "G-QVN5D4LG75"
+        apiKey: "AIzaSyBD7MBF1tvdy0t5yIQLNStbrer5vp6qXPI",
+        authDomain: "vigneshcoinhosting.firebaseapp.com",
+        projectId: "vigneshcoinhosting",
+        storageBucket: "vigneshcoinhosting.appspot.com",
+        messagingSenderId: "830481915833",
+        appId: "1:830481915833:web:6f9377961efbc163b72068",
+        measurementId: "G-MQSGJXKNHT"
       };
     constructor( url){
         this.url = this.locateurl()
