@@ -44,7 +44,7 @@ function Journey() {
       
                 <div className="col xl4 l4 s12 m12">
                    <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
-                    On April 2023 , I promoted as Support software engineer - II and owned compliance (software security assesment) task goal in amazon music team
+                    On April 2023 , I got promoted as Support software engineer - II and owned compliance goal (software security assesment)  in amazon music team
                     </p>
 
                 </div>
