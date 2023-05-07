@@ -20,17 +20,37 @@ function Journey() {
 
      
                 {/* journey one starts */}
+                {/* Journey one */}
             <div className="row" data-aos="fade-left">
                 <div className="col xl1 l1 s12 m12">
                     <img src={amazonlogo} alt={amazonlogo} style={{width:"200px"}} className="responsive-img" />
 
                 </div>
                 <div className="col xl4 l4 s12 m12">
-                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>From October 2020 I had started my career as support engineer in amazon music team </p>
+                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
+                    From October 2019 I had started my career as support software engineer in amazon music team </p>
 
                 </div>
             </div>
             {/* journey one ends */}
+            {/* Journey two */}
+            <div className="row" data-aos="fade-right">
+            <div className="col xl4 l4 s12 m12"></div>
+            <div className="col xl3 l3 s12 m12"></div>
+                <div className="col xl1 l1 s12 m12">
+                    <img src={amazonlogo} alt={amazonlogo} style={{width:"200px"}} className="responsive-img" />
+
+                </div>
+      
+                <div className="col xl4 l4 s12 m12">
+                   <p style={{marginTop : 10, fontSize : 20 , lineHeight : 1.6 , fontFamily: ['Poppins', 'sans-serif']}}>
+                    On April 2023 , I promoted as Support software engineer - II and owned compliance (software security assesment) task goal in amazon music team
+                    </p>
+
+                </div>
+            </div>
+              {/* Journey two ends */}
+            
         </React.Fragment>
     );
 }
