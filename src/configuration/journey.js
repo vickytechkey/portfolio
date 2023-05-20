@@ -1,0 +1,21 @@
+import amazonlogo from "../assets/homepage/AmazonLogo.svg";
+export default function journeystatic() {
+  const jobdetails = [
+    {
+      companylogo: amazonlogo,
+      description:
+        "From October 2019 I had started my career as support software engineer in amazon music team",
+    },
+    {
+      companylogo: amazonlogo,
+      description:
+        "On April 2023 , I got promoted as Support software engineer - II and owned compliance goal (software security assesment)  in amazon music team",
+    },
+
+    // {
+    //     companylogo : "",
+    //     description : ""
+    // }
+  ];
+  return jobdetails;
+}
