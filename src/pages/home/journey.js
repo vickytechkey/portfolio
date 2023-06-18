@@ -4,14 +4,12 @@ import journeystatic from "../../configuration/journey";
 // import amazonlogo from '../../assets/homepage/AmazonLogo.svg'
 function Journey() {
   const jobdetails = journeystatic();
-  console.log(jobdetails);
   const jobdetailsres = [];
   {
     jobdetails.forEach((x, index) => {
-      console.log(index);
       if (index % 2 == 0) {
         jobdetailsres.push(
-          <div className="row" data-aos="fade-left">
+          <div className="row" key={index} data-aos="fade-left">
             <div className="col xl1 l1 s12 m12">
               <img
                 src={x.companylogo}
@@ -36,7 +34,7 @@ function Journey() {
         );
       } else {
         jobdetailsres.push(
-          <div className="row" data-aos="fade-right">
+          <div className="row" key={index} data-aos="fade-right">
             <div className="col xl4 l4 s12 m12"></div>
             <div className="col xl3 l3 s12 m12"></div>
             <div className="col xl1 l1 s12 m12">

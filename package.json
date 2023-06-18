@@ -14,8 +14,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-scripts test && react-scripts build",
+     "test": "react-scripts test --watchAll=false", 
     "eject": "react-scripts eject",
     "deploy": "firebase deploy"
   },
@@ -48,7 +48,9 @@
     "jquery": "^3.6.0",
     "randomstring": "^1.2.3",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.2.1"
-  },
-  "proxy": "http://localhost:80"
+    "react-router-dom": "^6.2.1",
+    "react-test-renderer": "^18.2.0"
+  }
+ 
+  
 }
