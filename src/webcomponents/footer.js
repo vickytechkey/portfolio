@@ -28,7 +28,7 @@ function FooterBar() {
                 <ul>
                 {routes.map((element, index) => <li key={index}><Link className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
                 <li><a className="white-text hvr-underline-from-right-white" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={appconfig.Resumeurl}>Resume</a></li>
-                        <li><a className="white-text hvr-underline-from-right-white " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={appconfig.CVurls}>curriculum vitae</a></li>
+                        {/* <li><a className="white-text hvr-underline-from-right-white " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={appconfig.CVurls}>curriculum vitae</a></li> */}
                 </ul>
               </div>
             </div>

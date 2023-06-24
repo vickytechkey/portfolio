@@ -14,7 +14,6 @@ let appconfig = new AppConfiguration();
    function trigger() {
         let sidenav = document.querySelector('#slide-out');
        M.Sidenav.init(sidenav, {});
-      //  console.log("clicked")
      }
   
     const routes = [
@@ -33,7 +32,7 @@ let appconfig = new AppConfiguration();
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
                         <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={resumeurl} >Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li>
+                        {/* <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li> */}
                         
                     </ul>
           </div>
@@ -50,7 +49,7 @@ let appconfig = new AppConfiguration();
     </div></li>
     {routes.map((element, index) => <li key={index}><Link className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} to={element.path}>{ element.label}</Link></li>)}
                         <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }}  href={resumeurl} >Resume</a></li>
-                        <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li>
+                        {/* <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li> */}
   </ul>
  
         </React.Fragment>
