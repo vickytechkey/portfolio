@@ -1,8 +1,8 @@
 import React from "react";
 import { PurpleBar } from "../home/purplebar";
-import skillsarray from '../../configuration/skills'
+import skillsarray from "../../configuration/skills";
 function Skills() {
-    const logos = skillsarray()
+  const logos = skillsarray();
   return (
     <React.Fragment>
       <div className="row center-align">
@@ -18,18 +18,31 @@ function Skills() {
             I'm good at
           </h3>
         </div>
-        {logos.map((element, index) => (
-          <div key={index} className="col xl2 l2 s12 m12 center-align">
-            <img
-              data-aos-delay="500"
-              data-aos="zoom-in-up"
-              src={element}
-              alt={element}
-              className="responsive-img"
-              style={{ width: 100 }}
-            />
-          </div>
-        ))}
+        {logos.map((element, index) => {
+          if (element === "br") {
+            return (
+              <div key={index} className="row xl12 l12 s12 m12 center-align">
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
+            );
+          } else {
+            return (
+              <div key={index} className="col xl2 l2 s12 m12 center-align">
+                <img
+                  data-aos-delay="500"
+                  data-aos="zoom-in-up"
+                  src={element}
+                  alt={element}
+                  className="responsive-img"
+                  style={{ width: 100 }}
+                />
+              </div>
+            );
+          }
+        })}
       </div>
       <div className="row">
         <br />

@@ -9,7 +9,7 @@ function NavigationBar() {
 let appconfig = new AppConfiguration();
  
  let resumeurl = appconfig.Resumeurl.toString()
- let cvurl = appconfig.CVurls.toString()
+//  let cvurl = appconfig.CVurls.toString()
   
    function trigger() {
         let sidenav = document.querySelector('#slide-out');

@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import AppConfiguration from '../configuration/mainconfiguration'
 function FooterBar() {
   let appconfig = new AppConfiguration()
+  let linkedin = appconfig.linkedin
+  let email = appconfig.email
+  let twitter = appconfig.twitter
+  let linkedinurl = appconfig.linkedinurl
+  let twitterurl = appconfig.twitterurl
+  let emailurl = appconfig.emailurl
   const d = new Date();
   const year = d.getFullYear();
     const routes = [
@@ -35,8 +41,16 @@ function FooterBar() {
           </div>
           <div className="footer-copyright">
             <div className="container">
-            © {year} All rights reserved
-            {/* <a className="grey-text text-lighten-4 right" href="#!">More Links</a> */}
+            © {year} All rights reserved &nbsp;&nbsp;&nbsp;&nbsp;
+           
+            <a className="grey-text text-lighten-4 right" target="_blank" href={emailurl}>
+            <img src={email} alt={email} className="responsive-img" style={{ width: 30 }}/></a> 
+            <a className="grey-text text-lighten-4 right" target="_blank" href={twitterurl}>
+            <img src={twitter} alt={twitter} className="responsive-img" style={{ width: 30 }}/></a>     
+            <a className="grey-text text-lighten-4 right" target="_blank" href={linkedinurl}>
+            <img src={linkedin} alt={linkedin} className="responsive-img" style={{ width: 30 }}/></a>   
+                  
+                
             </div>
           </div>
         </footer>
