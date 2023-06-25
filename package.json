@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
     "firebase": "^9.16.0",
     "hover.css": "^2.3.2",
     "jquery": "^3.6.0",
+    "prettier": "^2.8.8",
     "randomstring": "^1.2.3",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.2.1",

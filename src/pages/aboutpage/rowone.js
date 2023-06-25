@@ -16,7 +16,14 @@ function Rowone() {
               fontFamily: ["Poppins", "sans-serif"],
             }}
           >
-            Passionate software engineer with a knack for problem-solving. Experienced in Bigdata and AWS cloud technologies, I thrive in collaborative environments and excel at delivering scalable solutions. Constantly learning and staying updated with emerging technologies, I am dedicated to writing clean, efficient code and ensuring exceptional user experiences. Seeking impactful opportunities to contribute my skills and drive transformative software projects.
+            Passionate software engineer with a knack for problem-solving.
+            Experienced in Bigdata and AWS cloud technologies, I thrive in
+            collaborative environments and excel at delivering scalable
+            solutions. Constantly learning and staying updated with emerging
+            technologies, I am dedicated to writing clean, efficient code and
+            ensuring exceptional user experiences. Seeking impactful
+            opportunities to contribute my skills and drive transformative
+            software projects.
           </h4>
         </div>
       </div>
