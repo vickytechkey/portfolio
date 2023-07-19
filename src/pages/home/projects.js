@@ -53,7 +53,7 @@ function Projects() {
                   <div className="card" >
                     <div className="card-image">
                     <a href="#">
-                      <img src={x["projectLogo"]} style={{width:280,height:220}} />
+                      <img src={x["projectLogo"]} className="responsive-img" />
                       </a>
                     </div>
                     <div className="card-content">

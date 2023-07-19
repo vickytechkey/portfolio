@@ -8,7 +8,7 @@ import HomePage from "./pages/homepage";
 import ProjectPage from "./pages/projectspage";
 import FooterBar from "./webcomponents/footer";
 import NavigationBar from "./webcomponents/navbar";
-
+import Projectdetail from './pages/projectpage/projectdetails'
 function App() {
   AOS.init();
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/projectsdetail" element={<Projectdetail />} />
       </Routes>
 
       <FooterBar />

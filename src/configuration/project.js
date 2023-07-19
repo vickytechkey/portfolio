@@ -1,9 +1,9 @@
-import grcimage from '../assets/projects/topprojects/compliant300.jpeg'
-import ospatching from '../assets/projects/topprojects/ospatching.jpeg'
-import customerticket from '../assets/projects/topprojects/customer300.jpeg'
-import projectsandswitch from '../assets/projects/topprojects/sandtwitch300.png'
-import s3costoptimise from '../assets/projects/topprojects/s3300.jpeg'
-import al2migration from '../assets/projects/topprojects/al2migration300.png'
+import grcimage from '../assets/projects/topprojects/compliancemanager500.png'
+import ospatching from '../assets/projects/topprojects/ospatching500.png'
+import customerticket from '../assets/projects/topprojects/customerticket500.png'
+import projectsandswitch from '../assets/projects/topprojects/sandtwitch500.png'
+import s3costoptimise from '../assets/projects/topprojects/s3500.png'
+import al2migration from '../assets/projects/topprojects/al2migration500.png'
 export default function TopProjectarray() {
     const topprojects_array = [
 
