@@ -1,11 +1,12 @@
 import React from "react";
+import AllProjectarray from '../../configuration/allprojects'
 import grcimage from '../../assets/projects/topprojects/compliancemanager500.png'
-
-
 function Projectdetail(){
     
     const queryParameters = new URLSearchParams(window.location.search)
-    let id = queryParameters.get("id")
+    let projectName = queryParameters.get("name")
+    const allprojects =  AllProjectarray()
+    let projectdetails = allprojects[0][projectName]
 
     return (
         <div>
@@ -14,11 +15,11 @@ function Projectdetail(){
 <div className="row">
     <div className="col s12 m12 xl1 l1"></div>
     <div className="col s12 m12 xl3 l3" data-aos="flip-left" data-aos-delay="1000">
-    <img src={grcimage} alt={grcimage} class="responsive-img" />
+    <img src={projectdetails['projectImage']} alt={projectdetails['projectImage']} className="responsive-img" />
     </div>
     <div className="col s12 m12 xl1 l1"></div>
     <div className="col s12 m12 xl6 l6" data-aos="zoom-in-up" data-aos-delay="1000">
-        <h2 data-aos="zoom-in-up" data-aos-delay="1000"> GRC compliance manager</h2>
+        <h2 data-aos="zoom-in-up" data-aos-delay="1000"> {projectdetails["projectName"]}</h2>
     </div>
 
 </div>
@@ -45,9 +46,7 @@ function Projectdetail(){
                   fontFamily: ["Poppins", "sans-serif"],
                 }}
               >
-               In 2021 host owned by paper was running with Amazon_Linux_2012 OS, running outdated OS leads to security thread.
-To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned to migrate all instance from AL2012 to AL2 before March 2022
-
+               {projectdetails['projectdescription']['intro']}
               </p>
 </div>
 
@@ -74,9 +73,7 @@ To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned 
                   fontFamily: ["Poppins", "sans-serif"],
                 }}
               >
-               In 2021 host owned by paper was running with Amazon_Linux_2012 OS, running outdated OS leads to security thread.
-To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned to migrate all instance from AL2012 to AL2 before March 2022
-
+{projectdetails['projectdescription']['behave']}
               </p>
 </div>
 </div>
@@ -84,7 +81,7 @@ To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned 
 {/* project impact start */}
 <div className="row">
 
-<div className="col s12 m12 xl6 l6">
+<div className="col s12 m12 xl8 l8">
 <h1 data-aos="fade-left" data-aos-delay="500"
             style={{
               marginTop: 0,
@@ -94,7 +91,7 @@ To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned 
               fontFamily: ["Poppins", "sans-serif"],
             }}
           >
-              what I did from my end ?
+              How my project improved our team ?
           </h1>
 <p data-aos="fade-left" data-aos-delay="500"
                 style={{
@@ -104,9 +101,7 @@ To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned 
                   fontFamily: ["Poppins", "sans-serif"],
                 }}
               >
-               In 2021 host owned by paper was running with Amazon_Linux_2012 OS, running outdated OS leads to security thread.
-To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned to migrate all instance from AL2012 to AL2 before March 2022
-
+{projectdetails['projectdescription']['impact']}
               </p>
 </div>
 </div>

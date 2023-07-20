@@ -1,5 +1,6 @@
 import React from "react";
 import TopProjectarray from '../../configuration/project'
+import { Link } from "react-router-dom";
 function Projects() {
   const topprojects = TopProjectarray()
   return (
@@ -17,7 +18,7 @@ function Projects() {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#" style={{textAlign:"right" , fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}>View all</a>
+      <Link to="sample" style={{textAlign:"right" , fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}>View all</Link>
       </div>
       </div>
         
@@ -52,9 +53,9 @@ function Projects() {
                   <div  className="col s12 m12 xl3 l3" data-aos="flip-left" data-aos-delay="1000" >
                   <div className="card" >
                     <div className="card-image">
-                    <a href="#">
+                    <Link to={x["projectLink"]}>
                       <img src={x["projectLogo"]} className="responsive-img" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="card-content">
                       <p style={{

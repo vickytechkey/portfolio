@@ -16,7 +16,7 @@ export default function TopProjectarray() {
         projectid : "00",
         projectTitle : "GRC Compliance Manager",
         projectLogo : grcimage,
-        projectLink : ""
+        projectLink : "/projectsdetail?name=grccompliancemanager"
     },
     {
         projectid : "1"
@@ -26,7 +26,7 @@ export default function TopProjectarray() {
     projectid : "01",
     projectTitle : "OS Patching",
     projectLogo : ospatching,
-    projectLink : ""
+    projectLink : "/projectsdetail?name="
 },
 {
     projectid : "1"
@@ -36,7 +36,7 @@ export default function TopProjectarray() {
 projectid : "02",
 projectTitle : "Customer Tickets",
 projectLogo : customerticket,
-projectLink : ""
+projectLink : "/projectsdetail?name="
 },
 {
     projectid : "r"
@@ -49,7 +49,7 @@ projectLink : ""
 projectid : "03",
 projectTitle : "Project Sandswitch",
 projectLogo : projectsandswitch,
-projectLink : ""
+projectLink : "/projectsdetail?name="
 },
 {
     projectid : "1"
@@ -75,5 +75,3 @@ projectLink : ""
     return topprojects_array;
 }
 
-// export default function projectarray() {
-// }
