@@ -4,6 +4,16 @@ import patchmamager from '../assets/projects/topprojects/ospatching500.png'
 import customerticketimage from '../assets/projects/topprojects/customerticket500.png'
 import projectsandtwitch from '../assets/projects/topprojects/sandtwitch500.png'
 import s3costoptimisation from '../assets/projects/topprojects/s3500.png'
+import sasrisk from '../assets/projects/sasrisk500.png'
+import complianceaudit from '../assets/projects/grcaudit500.png'
+import djsschedule from '../assets/projects/djsscheduler500.png'
+import pipelinefailure from '../assets/projects/pipelinefailure500.png'
+import acemsengine from '../assets/projects/acemsengine500.png'
+import grcticketaudit from '../assets/projects/grcaudit500.png'
+import grcweb from '../assets/projects/grcweb500.png'
+import codereview from '../assets/projects/codereviews500.png'
+import auditingl3 from '../assets/projects/auditingdart500.png'
+import training from '../assets/projects/training500.png'
 export default function AllProjectarray() {
     const allprojects = [
       {
@@ -43,7 +53,7 @@ export default function AllProjectarray() {
         },
   "djsautomationforacems" : {
           "projectName" : "DJS job for MusicRoyaltiesAcems",
-          "projectImage" : '',
+          "projectImage" : djsschedule,
           "projectdescription" : {
           "intro" : `
           The paper team receive daily severity-3 tickets from MusicRoyaltiesAcems engine to clear the customer data, for all three regions FE,EU, and NA each tickets for each region. The SLA of the ticket is 48 hrs.Due to this we need to spend 30 mins in each ticket and run the djs job to clear data for both Adult and Child customer manually. Total we need to 90 mins to resolve this daily task.
@@ -112,7 +122,7 @@ export default function AllProjectarray() {
 
         "grccomplianceaudit" : {
           "projectName" : "GRC compliance audit",
-          "projectImage" : '',
+          "projectImage" : complianceaudit,
           "projectdescription" : {
           "intro" : `
           We received tickets from GRC team, whenever the changes happen in AWS resources through console. This tickets helps the GRC team to audit and capture justification for the changes made through console, the pain point in this ticket is GRC portal won’t give details of user who made the changes, we need locate the user manually. To get the user data we reached to GRC on-call initially and get user data from them through email or slack which will take 1-3 business to get response from on-call then we need to reach out the user who made changes and will resolve the ticket once we justification from the user
@@ -129,7 +139,7 @@ export default function AllProjectarray() {
  
         "addresssasrisk" : {
           "projectName" : "Addressed SAS Risk",
-          "projectImage" : '',
+          "projectImage" : sasrisk,
           "projectdescription" : {
           "intro" : `
           Paper org had 300+ risk in the dashboard in the month of Jan 2022, all risks are created SAS since paper arg system had consuming outdated and depreciated software
@@ -145,7 +155,7 @@ export default function AllProjectarray() {
         },
         "grccompliancemanager" : {
           "projectName" : "GRC compliance Manager",
-          "projectImage" : grcimage,
+          "projectImage" : grcweb,
           "projectdescription" : {
           "intro" : `
           Our team receives compliance ticket from GRC team whenever the changes made in AWS resource through console, the purpose of the ticket is to capture the changes user details and justification for changes made through console, for each and every violation we need to reach out to the user and get justification for the changes.
@@ -161,7 +171,7 @@ export default function AllProjectarray() {
         },
         "pipelinefailure" : {
           "projectName" : "Pipeline failure tickets sev2",
-          "projectImage" : '',
+          "projectImage" : pipelinefailure,
           "projectdescription" : {
           "intro" : `
           RoyaltiesOps (SFO) receive the sev 2 tickets from royalties, when the jobs  are failed in OmniDashBoard to notify us, the system cuts auto-cut ticket to notify us. Royalties dataset is source for all jobs reporting and publishing jobs. The SLA for the ticket is 24 hours.
@@ -210,7 +220,7 @@ export default function AllProjectarray() {
         },
         "musicroyaltiesacems" : {
           "projectName" : "MusicRoyalties ACEMS engine tickets",
-          "projectImage" : grcimage,
+          "projectImage" : acemsengine,
           "projectdescription" : {
           "intro" : `
           The paper team receive daily severity-3 tickets from MusicRoyaltiesAcems engine to clear the customer data, for all three regions FE,EU, and NA each tickets for each region. The SLA of the ticket is 48 hrs
@@ -227,7 +237,7 @@ export default function AllProjectarray() {
         },
         "grctickethandling" : {
           "projectName" : "GRC compliance Ticket handling",
-          "projectImage" : grcimage,
+          "projectImage" : grcticketaudit,
           "projectdescription" : {
           "intro" : `
           We received compliance ticket from GRC team, whenever the changes made in AWS account through console owned by paper team, GRC team creating team to capture the justification and record user details who made changes through the console.
@@ -246,7 +256,7 @@ export default function AllProjectarray() {
         },
         "codereviews" : {
           "projectName" : "Code Reviews ",
-          "projectImage" : grcimage,
+          "projectImage" : codereview,
           "projectdescription" : {
           "intro" : `
           PaperOps (Chennai Team) is responsible for various tasks like SAS risk, shepherd and handling of customer tickets, to complete the task sometime we need to make code changes.
@@ -270,7 +280,7 @@ export default function AllProjectarray() {
         },
         "auditinggrchandles" : {
           "projectName" : "Auditing L3 Dart contacts for PNQ10 and DEL18",
-          "projectImage" : grcimage,
+          "projectImage" : auditingl3,
           "projectdescription" : {
           "intro" : `
           we heard lot of feedbacks from CS-Dart agents and Team Manager, stating that invalid concessions are going through DART from sites of PNQ and DEL. We will issue extra concession as token of apology whenever the customer experience impacted by amazon.
@@ -288,7 +298,7 @@ export default function AllProjectarray() {
         },
         "providingkttose1" : {
           "projectName" : "Providing KT to SE - 1",
-          "projectImage" : grcimage,
+          "projectImage" : training,
           "projectdescription" : {
           "intro" : `
           As a part of hiring process we had hired a fresher vivekq, who is new to amazon technology, initially face some issues in handling task
@@ -305,87 +315,7 @@ export default function AllProjectarray() {
 
           }
         },
-        "" : {
-          "projectName" : "",
-          "projectImage" : '',
-          "projectdescription" : {
-          "intro" : `
-
-          `,
-          "behave" : `
-         
-          `,
-          "impact" : `
-         
-          `
-
-          }
-        },
-        "" : {
-          "projectName" : "",
-          "projectImage" : '',
-          "projectdescription" : {
-          "intro" : `
-
-          `,
-          "behave" : `
-         
-          `,
-          "impact" : `
-         
-          `
-
-          }
-        },
-        "" : {
-          "projectName" : "",
-          "projectImage" : '',
-          "projectdescription" : {
-          "intro" : `
-
-          `,
-          "behave" : `
-         
-          `,
-          "impact" : `
-         
-          `
-
-          }
-        },
-        "" : {
-          "projectName" : "",
-          "projectImage" : '',
-          "projectdescription" : {
-          "intro" : `
-
-          `,
-          "behave" : `
-         
-          `,
-          "impact" : `
-         
-          `
-
-          }
-        },
-        "" : {
-          "projectName" : "",
-          "projectImage" : '',
-          "projectdescription" : {
-          "intro" : `
-
-          `,
-          "behave" : `
-         
-          `,
-          "impact" : `
-         
-          `
-
-          }
         }
-      }
     ]
         // "" : {
         //   "projectName" : "",

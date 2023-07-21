@@ -17,7 +17,7 @@ function NavigationBar() {
 
   const routes = [
     { path: "/", label: "Home" },
-    // { 'path': "/projects", 'label': 'My works' },
+    { 'path': "/projects", 'label': 'My works' },
     { path: "/about", label: "About myself" },
     { path: "/contact", label: "Say Hello" },
   ];
