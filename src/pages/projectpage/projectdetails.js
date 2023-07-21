@@ -1,12 +1,13 @@
 import React from "react";
 import AllProjectarray from '../../configuration/allprojects'
-import grcimage from '../../assets/projects/topprojects/compliancemanager500.png'
 function Projectdetail(){
     
     const queryParameters = new URLSearchParams(window.location.search)
     let projectName = queryParameters.get("name")
     const allprojects =  AllProjectarray()
+    console.log(allprojects)
     let projectdetails = allprojects[0][projectName]
+    
 
     return (
         <div>
@@ -91,7 +92,7 @@ function Projectdetail(){
               fontFamily: ["Poppins", "sans-serif"],
             }}
           >
-              How my project improved our team ?
+              what I changed ?
           </h1>
 <p data-aos="fade-left" data-aos-delay="500"
                 style={{

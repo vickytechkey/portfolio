@@ -26,7 +26,7 @@ export default function TopProjectarray() {
     projectid : "01",
     projectTitle : "OS Patching",
     projectLogo : ospatching,
-    projectLink : "/projectsdetail?name="
+    projectLink : "/projectsdetail?name=ospatchingproject"
 },
 {
     projectid : "1"
@@ -36,7 +36,7 @@ export default function TopProjectarray() {
 projectid : "02",
 projectTitle : "Customer Tickets",
 projectLogo : customerticket,
-projectLink : "/projectsdetail?name="
+projectLink : "/projectsdetail?name=customerticket"
 },
 {
     projectid : "r"
@@ -49,7 +49,7 @@ projectLink : "/projectsdetail?name="
 projectid : "03",
 projectTitle : "Project Sandswitch",
 projectLogo : projectsandswitch,
-projectLink : "/projectsdetail?name="
+projectLink : "/projectsdetail?name=projectsandwihch"
 },
 {
     projectid : "1"
@@ -58,7 +58,7 @@ projectLink : "/projectsdetail?name="
     projectid : "04",
     projectTitle : "AL2 Migration",
     projectLogo : al2migration,
-    projectLink : ""
+    projectLink : "/projectsdetail?name=al2migration"
     },
     {
         projectid : "1"
@@ -67,7 +67,7 @@ projectLink : "/projectsdetail?name="
         projectid : "05",
         projectTitle : "S3 Cost Optimisation",
         projectLogo : s3costoptimise,
-        projectLink : ""
+        projectLink : "/projectsdetail?name=s3costoptimisationproject"
         },
 
 ]
