@@ -1,6 +1,7 @@
 import React from "react";
 import TopProjectarray from '../../configuration/project'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 function Projects() {
   const topprojects = TopProjectarray()
   return (
@@ -18,7 +19,7 @@ function Projects() {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link to="sample" style={{textAlign:"right" , fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}>View all</Link>
+      <Link to="/projects#grccompliancemanager" style={{textAlign:"right" , fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}>View all</Link>
       </div>
       </div>
         

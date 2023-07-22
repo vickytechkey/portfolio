@@ -19,7 +19,7 @@ export default function AllProjectarray() {
       {
         "grccompliancemanager" : {
           "projectName" : "GRC Compliance Manager",
-          "projectImage" : grcimage,
+          "projectImage" : grcweb,
           "projectdescription" : {
           "intro" : `
           We received tickets from GRC team, whenever the changes happen in AWS resources through console. This tickets helps the GRC team to audit and capture justification for the changes made through console, the pain point in this ticket is GRC portal won’t give details of user who made the changes, we need locate the user manually. To get the user data we reached to GRC on-call initially and get user data from them through email or slack which will take 1-3 business to get response from on-call then we need to reach out the user who made changes and will resolve the ticket once we justification from the user
@@ -186,7 +186,7 @@ export default function AllProjectarray() {
           }
         },
 "ospatchingproject" : {
-          "projectName" : "Python Script for Operational Excellence",
+          "projectName" : "Patch Manager",
           "projectImage" : patchmamager,
           "projectdescription" : {
           "intro" : `
@@ -279,7 +279,7 @@ export default function AllProjectarray() {
           }
         },
         "auditinggrchandles" : {
-          "projectName" : "Auditing L3 Dart contacts for PNQ10 and DEL18",
+          "projectName" : "Auditing L3 Dart",
           "projectImage" : auditingl3,
           "projectdescription" : {
           "intro" : `

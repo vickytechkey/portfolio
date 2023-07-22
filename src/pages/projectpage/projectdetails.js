@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useEffect,useState  } from "react";
 import AllProjectarray from '../../configuration/allprojects'
+import { Link } from "react-router-dom";
+import projectenum from './projectenum'
 function Projectdetail(){
-    
-    const queryParameters = new URLSearchParams(window.location.search)
-    let projectName = queryParameters.get("name")
-    const allprojects =  AllProjectarray()
-    console.log(allprojects)
-    let projectdetails = allprojects[0][projectName]
-    
 
+  
+  const allprojects =  AllProjectarray()
+  let queryParameters = new URLSearchParams(window.location.search)
+  const [projectname, setprojectname] = useState(queryParameters.get("name"));
+  let projectdetails = allprojects[0][projectname]
+  
+    window.scrollTo(0, 0)
+   
+    
+    let project_num = projectenum()
+    let currentprojectindex = project_num.indexOf(projectname)
+    let nextprojectindex = null
+    let previousprojectindex = null
+    if(currentprojectindex != 0){
+      nextprojectindex = currentprojectindex+1
+      previousprojectindex = currentprojectindex -1
+}
+else {
+  previousprojectindex = project_num.length-1
+  nextprojectindex = currentprojectindex+1
+}
+
+let next_projectname = "/projectsdetail?name="+project_num[nextprojectindex]
+let previousprojectname = "/projectsdetail?name="+project_num[previousprojectindex]
+
+useEffect(()=>{
+  window.scrollTo(0, 0)
+},[])
+   
     return (
         <div>
             {/* project image and title starts */}
@@ -107,7 +131,25 @@ function Projectdetail(){
 </div>
 </div>
 {/* project impact end */}
+<div className="row">
+<div className="col s12 m12 xl2 l2">
+<Link to={previousprojectname} style={{textAlign:"right" , fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}
+onClick={()=>{
+  setprojectname(project_num[previousprojectindex])
+}}
+>Previous Project</Link>
+
+  </div>  
+<div className="col s12 m12 xl4 l4"></div> 
+<div className="col s12 m12 xl4 l4" style={{textAlign:"right"}}></div>  
+<Link to={next_projectname}  style={{textAlign:"right" , fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}
+onClick={()=>{
+  setprojectname(project_num[nextprojectindex])
+}}
+>Next Project</Link>
+          </div>
         </div>
+    
     )
 
 
