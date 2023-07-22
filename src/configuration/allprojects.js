@@ -17,36 +17,19 @@ import training from '../assets/projects/training500.png'
 export default function AllProjectarray() {
     const allprojects = [
       {
-        "grccompliancemanager" : {
-          "projectName" : "GRC Compliance Manager",
-          "projectImage" : grcweb,
-          "projectdescription" : {
-          "intro" : `
-          We received tickets from GRC team, whenever the changes happen in AWS resources through console. This tickets helps the GRC team to audit and capture justification for the changes made through console, the pain point in this ticket is GRC portal won’t give details of user who made the changes, we need locate the user manually. To get the user data we reached to GRC on-call initially and get user data from them through email or slack which will take 1-3 business to get response from on-call then we need to reach out the user who made changes and will resolve the ticket once we justification from the user
-          `,
-          "behave" : `
-          I explored AWS and found a solution to locate the user details for S3 violations using event source and dynamoDB violations using ResourceName.
-          `,
-          "impact" : `
-          By implementing this solution, there is no need to contact GRC on-call for user data. Also since we’re locating user data ourselves and  we can resolve the GRC ticket before SLA.
-          `
-
-          }
-        },
         "al2migration" : {
           "projectName" : "AL2 Migration",
           "projectImage" : al2migration,
           "projectdescription" : {
           "intro" : `
-          In 2021 host owned by paper was running with Amazon_Linux_2012 OS, running outdated OS leads to security thread.
-          To fix issue Amazon wide AL2 migration campaign was planned in 2021 and planned to migrate all instance from AL2012 to AL2 before March 2022
+          In 2021, a host owned by Paper was running with the Amazon Linux 2012 OS. Running an outdated OS leads to security issues. To fix the issue, an Amazon-wide AL2 migration campaign was planned in 2021, with the plan to migrate all instances from AL2012 to AL2 before March 2022.
           
           `,
           "behave" : `
-          To migrate the instance from AL2012 to AL2, Vignesh used service called quilt, which is internal tool used in Amazon to migrate the Operating System from AL2012 to AL2, without loss of data or replacement host. Vignesh had created quilt pipeline and migrate the operating system from AL2012 to AL2
+          To migrate the instance from AL2012 or RedHatLinux to AL2, Amazon uses a version set, which stores all dependencies required to run the service. I went ahead and upgraded the dependencies and migrated the operating system from AL2012 or RedHat Linux to AL2. To migrate the host operating system, I used a service called Quilt, which is an internal Amazon tool used to migrate the Operating System from RedHatLinux or AL2012 to AL2 without loss of data or replacing the host. I had created the quilt pipeline and migrated the operating system from AL2012 to AL2.
           `,
           "impact" : `
-          Vignesh successfully migrated the 8  services which contains  15 beta host and 50 prod host without any loss of data and production down time.
+          I successfully migrated the 21 services, which contain 1015 hosts, without any loss of data or production downtime.
           `
 
           }
@@ -56,13 +39,13 @@ export default function AllProjectarray() {
           "projectImage" : djsschedule,
           "projectdescription" : {
           "intro" : `
-          The paper team receive daily severity-3 tickets from MusicRoyaltiesAcems engine to clear the customer data, for all three regions FE,EU, and NA each tickets for each region. The SLA of the ticket is 48 hrs.Due to this we need to spend 30 mins in each ticket and run the djs job to clear data for both Adult and Child customer manually. Total we need to 90 mins to resolve this daily task.
+          Our paper team receives daily severity-3 tickets from the MusicRoyaltiesAcems engine to clear the customer data for all three regions: FE,EU, and NA. The SLA for the ticket is 48 hours. Due to this, we need to spend 30 minutes on each ticket (3 tickets per day) and run the DJS job to clear data for both Adult and Child customers manually. In total, we need 90 minutes to resolve this daily task.
           `,
           "behave" : `
-          Vignesh observed the ticket pattern and identified that ticket was created for non-deleted customer data at 4:30am (IST) on every day, so Vignesh created DJS jobs for Child and Adult customer separately for each region, total 6 DJS job and scheduled it for 4:00am which clear the Adult and Child customers data and before creation of ticket.
+          I observed the ticket pattern and identified that tickets were created for non-deleted customer data at 4:30 a.m. (IST) every day, so I created DJS jobs for Child and Adult customers separately for each region, totaling 6 DJS jobs, and scheduled them for 4:00 a.m., which cleared the Adult and Child customers data before the creation of the ticket.
           `,
           "impact" : `
-          From December 2021 to August 2022 we had received 259 tickets, after establishing the DJS job from mid of Aug, we didn’t get any tickets from ACEMS, which save 60 mins of human effort every day.
+          In the last two years, we have received 2190 tickets. After establishing the DJS job, we didn’t get any tickets from ACEMS, which saves 90 minutes of human effort every day.
           `
 
           },
@@ -73,13 +56,13 @@ export default function AllProjectarray() {
           "projectImage" : s3costoptimisation,
           "projectdescription" : {
           "intro" : `
-          In paper org we’re storing lot of customer and organisational data in our S3 bucket, which  makes more cost in S3 bucket resource, to save unwanted expense, amazon conducted S3 bucket campaign which located the high storage S3 bucket without lifecycle policy and cut tickets to respective team.
+          In our paper organization, we’re storing a lot of customer and organizational data in our S3 bucket, which makes the S3 bucket resource more expensive. To save on unnecessary expenses, I conducted a S3 bucket campaign that located the high-storage S3 bucket without a lifecycle policy and cut tickets to the respective team.
           `,
           "behave" : `
-          For paper org we received ticket for both Royalties and Reporting AWS account, Vignesh reviewed the bucket and created a consolidated quip which contains the S3 data details and the respective S3 path and reached to both Reporting and Royalties Dev as well as SDM to get dataset requirement and we finally decided to set life cycle policy for 5 years to production bucket and 30 days for beta buckets 
+          Along with cutting tickets to other music teams, I reviewed the bucket in our PAPER team and created a consolidated quip that contains the S3 data details and the respective S3 path. I reached out to SDM to get the dataset requirements to decide the data retention policy, and we finally decided to set a life cycle policy for 5 years for the production bucket and 30 days for beta buckets.
           `,
           "impact" : `
-          As a result of lifecycle policies, on the prod account we able to see the impact in S3 cost from 2023 as all the datas in prod account is stored in 2018 October and since create life cycle policy for 30 days, all the data in the beta bucket will get delete after 30 days
+          This deletes unused data automatically. based on access patterns and deleted unused data, which saved 10+ million in billing in our S3 and reduced cost by 58% of the total bill.
           `
 
           }
@@ -89,13 +72,13 @@ export default function AllProjectarray() {
           "projectImage" : projectsandtwitch,
           "projectdescription" : {
           "intro" : `
-          This project target to migrate our c/m/i 1, 2, 3 or 4 series capacity in IAD/PDX to power efficient current generation (6g/5/6i) instance types. The preferred migrations strategy is to Icelake(c6i, m61, r61) for C & M family migrations and to utilize i3en / i4i for Vignesh platform migrations.
+          This project aims to migrate our c/m/i 1, 2, 3, or 4 series capacity in IAD/PDX to power-efficient current generation (6g/5/6i) instance types. The preferred migration strategy is to use Icelake (c6i, m61, and r61) for C and M family migrations and to utilize i3en and i4i for music platform migrations.
           `,
           "behave" : `
-          Before migrating host, we had couple of action item, Vignesh had ordered required host in required region through fleet console and created stepping plan which contains data with required host number for each service and region as per host configuration.Then Vignesh had created ASG for all apollo environment and created MCM  with our action item which reviewed and  approved by respective on-call SDE to migrate our host.Once we got an approval, will onboard the new host to our ASG and remove the old host without any downtime in our service.
+          Before migrating hosts, we had a couple of action items. I had ordered the required host in the required region through the fleet console and created a stepping plan, which contains data with the required host number for each service and region as per host configuration. Then I created ASG for all Apollo environments and created MCM with our action item, which was reviewed and approved by the respective SDM to migrate our host. Once we get approval, we will onboard the new host to our ASG and remove the old host without any downtime in our service.
           `,
           "impact" : `
-          As the result of migration, we saved expenditure due to low power consumption and achieved his process efficiency for 89 host and which running 69 apollo environment stages.
+          I had changed host configuration for 1024 hosts and also made code changes to 76 packages and 1000+ lines to prepare the service for migration without any interruption.
           `
 
           }
@@ -105,16 +88,14 @@ export default function AllProjectarray() {
           "projectImage" : patchmamager,
           "projectdescription" : {
           "intro" : `
-          Paper team receiving tickets from shepherd team  to update the EC2 instance operating system, which running with risk softwares to recommended version, this risk software had direct impact on our security vulnerability. To resolve the shepherd risks  we need to login into the host and update the software through terminal with bash command.
-
-          Doing this manually will make us to spend 30 minutes on each host, to run all command to host manually.
+      Our paper team received tickets from the shepherd team to update the EC2 instance operating system, which was running with risk software. This risky software had a direct impact on our security vulnerabilities. To resolve the shepherd risks, we need to login to the host and update the software through the terminal with the bash command. Doing this manually will require us to spend 30–60 minutes on each host to run all commands on that host manually.
           
           `,
           "behave" : `
-          Since we had receiving lot of instance under the same risk, Vignesh explored AWS and find optimal solution to fix the issue which is called patch manager, using this patch manager we can execute the command upto 50 host at same time, we can select the instance manually or we can provide the tag to the patch manager which execute the given command to all instance associated with the tag.
+          Since we had received a lot of instances under the same risk, I explored AWS and found the optimal solution to fix the issue, which is called the patch manager. Using this patch manager, we can execute the command on up to 50 hosts at the same time. but still we are only able to patch 50 instances at a time. To expand the opportunity, I create the service with SageMake, which patches the instance daily and reboots the instance if the reboot is required.
           `,
           "impact" : `
-          Due to this we had patched 259 instance as of now and resolved  few shepherd tickets associated with EC2 instance pathing risk, we patch instance within 10 minutes for 50 instance, which save 5+ hours time and human effort on this type of tickets, also we can save log details in S3 bucket through patch manager if require so any one can validate the job which done through patch manager.
+          After implementing my project, we have patched 1024 instances as of now and resolved 500+ shepherd tickets associated with EC2 instance pathing risk. We patch instances within 10 minutes for 1024 instances, which saves 119+ hours of time and human effort on this type of ticket. The patch log details are saved in our S3 bucket through patch manager, so anyone can validate the job that was done through patch manager.
           `
 
           }
@@ -125,13 +106,13 @@ export default function AllProjectarray() {
           "projectImage" : complianceaudit,
           "projectdescription" : {
           "intro" : `
-          We received tickets from GRC team, whenever the changes happen in AWS resources through console. This tickets helps the GRC team to audit and capture justification for the changes made through console, the pain point in this ticket is GRC portal won’t give details of user who made the changes, we need locate the user manually. To get the user data we reached to GRC on-call initially and get user data from them through email or slack which will take 1-3 business to get response from on-call then we need to reach out the user who made changes and will resolve the ticket once we justification from the user
+          We received tickets from the GRC team whenever changes happened to AWS resources through the console. This ticket helps the GRC team audit and capture justification for the changes made through the console. The pain point in this ticket is that the GRC portal won’t give details of the user who made the changes; we need to locate the user manually. To get the user data, we reached out to GRC on-call initially and got user data from them through email or Slack, which will take 1-3 business days to get a response from on-call. Then, we needed to reach out to the user who made the changes and will resolve the ticket once we get justification from the user.
           `,
           "behave" : `
-          I explored AWS and found a solution to locate the user details for S3 violations using event source and dynamoDB violations using ResourceName.
+          I explored AWS and found a solution to locate the user details for S3 violations using event source and dynamoDB violations using resource name.
           `,
           "impact" : `
-          By implementing this solution, there is no need to contact GRC on-call for user data. Also since we’re locating user data ourselves and  we can resolve the GRC ticket before SLA.
+          By implementing this solution, there is no need to contact GRC on-call for user data. Also, since we’re locating user data ourselves and we can resolve the GRC ticket before SLA.
           `
 
           }
@@ -142,13 +123,13 @@ export default function AllProjectarray() {
           "projectImage" : sasrisk,
           "projectdescription" : {
           "intro" : `
-          Paper org had 300+ risk in the dashboard in the month of Jan 2022, all risks are created SAS since paper arg system had consuming outdated and depreciated software
+          Paper org had 500+ risks in the dashboard in the month of January 2019, all of which were created in SAS since the paper arg system was consuming outdated and depreciated software.
           `,
           "behave" : `
-          To resolve the SAS we collected system job details and consolidated the data in quip which help us to validate the job once we make the code changes.For code reviews Vignesh had contacted respective team on-call and got approval from them, for apollo related risks (Eg:sync from parent, adding or removing consumable environment) Vignesh got approval through MCM and resolve the risk, also verified job status.
+                    To resolve the SAS I collected system job details and consolidated the data in quip, which helps us validate the job once we make the code changes. To address the risk, I upgraded the software to the recommended version, posted 1156 code changes that address 489 risks in the last 4 years, and modified test cases for 56 services.
           `,
           "impact" : `
-          As a result Vignesh had addressed 2183 SAS tickets and make our system as compliant 
+          As a result I had addressed 2183 SAS tickets and make our system as compliant 
           `
 
           }
@@ -158,13 +139,13 @@ export default function AllProjectarray() {
           "projectImage" : grcweb,
           "projectdescription" : {
           "intro" : `
-          Our team receives compliance ticket from GRC team whenever the changes made in AWS resource through console, the purpose of the ticket is to capture the changes user details and justification for changes made through console, for each and every violation we need to reach out to the user and get justification for the changes.
+          Our team receives compliance tickets from the GRC team whenever changes are made to AWS resources through the console. The purpose of the ticket is to capture the user details and justification for the changes made through the console. For each and every violation, we need to reach out to the user and get justification for the changes.
           `,
           "behave" : `
-          To resolve the issue, Vignesh planned to create an web application, and provide access to web application to all aws account owned by paper, so whenever the users need to make changes in AWS account, they can made changes through  website.Before executing the changes, the web application will get all details like business justification and their manager alias and store the details in RDS for our auditing purpose.
+          To resolve the issue, I created a web application and provided access to the web application to all AWS accounts owned by Paper, so whenever the users needed to make changes to their AWS accounts, they could do so through the website. Before executing the changes, the web application will get all the details, like the business justification, and store the details in RDS for our auditing purposes.
           `,
           "impact" : `
-          No tickets will be created from GRC, No need to reach_out to user for justification, audit process will be easy as we can export details for audit whenever we want, human effort 5+ hours will get save on every week.
+          After implementing this project, we didn't get any tickets from GRC, which resulted in saving 600 hours of working effort per year. Also, we are able to download audits on the basis of S3 bucket resource names; this saves 30 hours per quarter.
           `
 
           }
@@ -174,13 +155,13 @@ export default function AllProjectarray() {
           "projectImage" : pipelinefailure,
           "projectdescription" : {
           "intro" : `
-          RoyaltiesOps (SFO) receive the sev 2 tickets from royalties, when the jobs  are failed in OmniDashBoard to notify us, the system cuts auto-cut ticket to notify us. Royalties dataset is source for all jobs reporting and publishing jobs. The SLA for the ticket is 24 hours.
+          RoyaltiesOps (SFO) receives the sev 2 tickets from royalties. When the jobs fail in OmniDashBoard to notify us, the system cuts an auto-cut ticket to notify us. The royalties dataset is the source for all jobs reporting and publishing jobs. The SLA for the ticket is 24 hours.
           `,
           "behave" : `
-          To resolve the ticket, Vignesh had locate the root-cause for the failure, by reading logs and re-run the failed job, till job get succeed will monitor the job and resolve the ticket once the job completed successfully. 
+          To resolve the ticket, I had to locate the root cause and fix the root cause by removing dead vendors from active vendors.
           `,
           "impact" : `
-          Vignesh had resolved 107 sev2 tickets immediately, which able to prevent delay in delivering the daily reports to vendor 
+          I had resolved 107 sev2 tickets immediately, which able to prevent delay in delivering the daily reports to vendor.Also by fixing the root cause I prevented 1095 tickets per year.
           `
 
           }
@@ -210,10 +191,10 @@ export default function AllProjectarray() {
           we often receive payment related queries from vendors through Optimus - Nightingale Music Queue, this tickets are high priority  ticket as this tickets had direct impact on customer. From July 2022 we had received high number of customer tickets with missing report and payment discrepancy
           `,
           "behave" : `
-          To resolve the ticket, Vignesh had go-through KT videos and get in touch with the SFO to get S3 dataset details, which required to locate the root-cause of vendor issue, once Vignesh located the vendor issue provided the solution to vendor and resolve the tickets.
+          To resolve the ticket, I complete my analysis and get in touch with the SFO (San Fansico ) to get S3 dataset details, which required to locate the root-cause of vendor issue, once I located the vendor issue provided the solution to vendor and resolve the tickets.
           `,
           "impact" : `
-          As a result, Vignesh had resolved 25 customer tickets and worked on 4 customer tickets, which help the resolvers to drive the investigation
+          As a result, I had resolved 256 customer tickets which included re-generating reports, customizing reports as per requirement, and fixing vendor FTP issue.
           `
 
           }
@@ -230,7 +211,7 @@ export default function AllProjectarray() {
           
           `,
           "impact" : `
-          As a result all customer datas will cleared from system before SLA which is 48 hours and resolved 172 tickets
+          As a result all customer datas will cleared from system before SLA which is 48 hours and resolved 2560+ tickets
           `
 
           }
@@ -246,10 +227,10 @@ export default function AllProjectarray() {
           
           `,
           "behave" : `
-          To resolve the TT, Vignesh locate the user details using the cloudTrial tool and get justification from the user through e-mail. Once Vignesh got justification from the user update the details on the TT and resolve the ticket.
+          To resolve the TT, I locate the user details using the cloudTrial tool and get justification from the user through e-mail. Once Vignesh got justification from the user update the details on the TT and resolve the ticket.
           `,
           "impact" : `
-          Due to this we able to keep all the AWS resource as compliant and  track all the details of the user as well as justification for the changes, and resolved 140 tickets
+          Due to this we able to keep all the AWS resource as compliant and  track all the details of the user as well as justification for the changes, and resolved 1450+ tickets
           `
 
           }
@@ -260,7 +241,7 @@ export default function AllProjectarray() {
           "projectdescription" : {
           "intro" : `
           PaperOps (Chennai Team) is responsible for various tasks like SAS risk, shepherd and handling of customer tickets, to complete the task sometime we need to make code changes.
-          Also Vignesh had pulled CR’s for grease monkey script, which reduce the work load and improve our current process (Eg: updating time in TT through sprint board without switching the website)
+          Also Vignesh had pulled CR’s (code reviews) for grease monkey script, which reduce the work load and improve our current process (Eg: updating time in TT through sprint board without switching the website)
           Our team also contributing to add missing vendor codes in the PaperView tool 
           
           `,
@@ -278,39 +259,21 @@ export default function AllProjectarray() {
 
           }
         },
-        "auditinggrchandles" : {
-          "projectName" : "Auditing L3 Dart",
-          "projectImage" : auditingl3,
-          "projectdescription" : {
-          "intro" : `
-          we heard lot of feedbacks from CS-Dart agents and Team Manager, stating that invalid concessions are going through DART from sites of PNQ and DEL. We will issue extra concession as token of apology whenever the customer experience impacted by amazon.
-
-          Issuing invalid customer for positive response and ccx point will project that their shopping experience ruined by amazon, also this downgrade the business profit in considerable amount (2 million dollars approximately)
-          
-          `,
-          "behave" : `
-          To fix the issue in CJB10, we audited the DART contact from PNQ10 and DEL18, and found that all the contacts had invalid concession as well as the contacts are closed without sending HMD (How is My Drive)
-          `,
-          "impact" : `
-          After the audit, we had send the consolidate the report and send to PNQ10 and DEL18 OPS manager and ask them to take appropriate action against the DART agents, in this project Vignesh had audited 300+ contacts in one week 
-          `
-        }
-        },
         "providingkttose1" : {
           "projectName" : "Providing KT to SE - 1",
           "projectImage" : training,
           "projectdescription" : {
           "intro" : `
-          As a part of hiring process we had hired a fresher vivekq, who is new to amazon technology, initially face some issues in handling task
-          `,
+          As a part of the hiring process, we hired 25 engineers who are new to Amazon technology and initially faced some issues handling tasks.          `,
           "behave" : `
-          To make this situation better, Vignesh planned KT for vivekq and provided shadowing session in all the tasks which Vignesh had handled earlier. But when it comes to SAS risk it is not same process for all the risk we need to apply correct solution after gathering recommendation from the SAS team, so Vignesh had provided KT to vivek regarding working on brazil-build system and MAWS environment.
+          To make this situation better, I planned KT for Vivekq and provided shadowing sessions for all the tasks that I had handled earlier, as well as for Amazon technologies like pipelines and build tools. But when it comes to SAS risks, it is not the same process for all the risks; we need to apply the correct solution after gathering recommendations from the SAS team, so I provided KT sessions to engineers regarding working on the Brazil-build system and MAWS environment.
 
-          Along with dedicated KT and reverse shadow process, Vignesh setup one on one meeting with and help me to resolve his task
+
+          Along with dedicated KT and reverse shadow processes, I set up a one-on-one meeting with him, and he helped me resolve his task.
           
           `,
           "impact" : `
-          As a result vivekq started to resolve SAS, GRC, DeltaMonitoring and shepherded risk on his own, which increase team ticket resolve count.
+          As a result all engineers started to resolve SAS, GRC, DeltaMonitoring and shepherded risk on his own, which increase team ticket resolve count by 91% when compare to previous year data.
           `
 
           }

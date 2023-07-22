@@ -12,10 +12,8 @@ const projectids =[
 'pipelinefailure',
 'ospatchingproject',
 'customerticket',
-'musicroyaltiesacems',
 'grctickethandling',
 'codereviews',
-'auditinggrchandles',
 'providingkttose1',
 ]
 return projectids
