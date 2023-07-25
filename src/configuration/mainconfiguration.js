@@ -6,7 +6,7 @@ import email from "../assets/footer/socialmedia/icons8-email-64.png";
 export default class AppConfiguration {
   // variables
   url;
-  linkedinurl = "https://www.linkedin.com/in/vignesh-k-695b88126/";
+  linkedinurl = "https://www.linkedin.com/in/vigneshky/";
   emailurl = "mailto: vichunice@gmail.com";
   twitterurl = "https://twitter.com/vichu91431238";
   // files urls

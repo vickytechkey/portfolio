@@ -54,11 +54,32 @@ function RowThree() {
                   fontFamily: ["Poppins", "sans-serif"],
                 }}
               >
-                Amazon software support engineer- 2018 to present
+                Amazon Software Support Engineer- I 2019 to 2022
               </h5>
             </div>
           </div>
           {/* ends */}
+          <div className="row" data-aos="zoom-in-up" data-aos-delay="300">
+            <div className="col xl1 l1 s12 m12">
+              <i
+                className="material-icons Large deep-purple-text darken-4"
+                style={{ fontSize: 40 }}
+              >
+                work
+              </i>
+            </div>
+            <div className="col xl9 l9 s12 m12" style={{ marginTop: -30 }}>
+              <h5
+                style={{
+                  fontSize: 20,
+                  lineHeight: 3.6,
+                  fontFamily: ["Poppins", "sans-serif"],
+                }}
+              >
+                Amazon Software Support Engineer- 2022 to present
+              </h5>
+            </div>
+          </div>
         </div>
         <div className="col xl6 l6 s12 m12 ">
           <img src={WorkImage} alt={WorkImage} className="responsive-img" />
