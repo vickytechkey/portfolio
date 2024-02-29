@@ -80,7 +80,7 @@ function FooterBar() {
         </div>
         <div className="footer-copyright">
           <div className="container">
-            © {year} All rights reserved &nbsp;&nbsp;&nbsp;&nbsp;
+            © {year} All rights reserved corrected &nbsp;&nbsp;&nbsp;&nbsp;
             <a
               className="grey-text text-lighten-4 right"
               target="_blank"
