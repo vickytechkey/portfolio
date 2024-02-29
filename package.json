@@ -20,6 +20,7 @@
     "deploy": "firebase deploy",
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
