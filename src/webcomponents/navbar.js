@@ -19,7 +19,7 @@ function NavigationBar() {
     { path: "/", label: "Home" },
     { 'path': "/projects", 'label': 'My works' },
     { path: "/about", label: "About myself" },
-    { path: "/contact", label: "Say Hello" },
+    // { path: "/contact", label: "Say Hello" },
   ];
   return (
     <React.Fragment>
@@ -48,7 +48,7 @@ function NavigationBar() {
                 </Link>
               </li>
             ))}
-            <li>
+            {/* <li>
               <a
                 className="black-text hvr-underline-from-right"
                 style={{ fontSize: 20, fontFamily: ["Poppins", "sans-serif"] }}
@@ -56,7 +56,7 @@ function NavigationBar() {
               >
                 Resume
               </a>
-            </li>
+            </li> */}
             {/* <li><a className="black-text hvr-underline-from-right" style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li> */}
           </ul>
         </div>
@@ -97,7 +97,7 @@ function NavigationBar() {
             </Link>
           </li>
         ))}
-        <li>
+        {/* <li>
           <a
             className="black-text hvr-underline-from-right"
             style={{ fontSize: 20, fontFamily: ["Poppins", "sans-serif"] }}
@@ -105,7 +105,7 @@ function NavigationBar() {
           >
             Resume
           </a>
-        </li>
+        </li> */}
         {/* <li><a className="black-text hvr-underline-from-right " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={cvurl}>curriculum vitae</a></li> */}
       </ul>
     </React.Fragment>

@@ -14,9 +14,9 @@ function FooterBar() {
   const year = d.getFullYear();
   const routes = [
     { path: "/", label: "Home" },
-    // { 'path': "/projects", 'label': 'My works' },
+     { 'path': "/projects", 'label': 'My works' },
     { path: "/about", label: "About myself" },
-    { path: "/contact", label: "Say Hello" },
+    // { path: "/contact", label: "Say Hello" },
   ];
   return (
     <React.Fragment>
@@ -61,7 +61,7 @@ function FooterBar() {
                     </Link>
                   </li>
                 ))}
-                <li>
+                {/* <li>
                   <a
                     className="white-text hvr-underline-from-right-white"
                     style={{
@@ -72,7 +72,7 @@ function FooterBar() {
                   >
                     Resume
                   </a>
-                </li>
+                </li> */}
                 {/* <li><a className="white-text hvr-underline-from-right-white " style={{ fontSize: 20, fontFamily: ['Poppins', 'sans-serif'] }} href={appconfig.CVurls}>curriculum vitae</a></li> */}
               </ul>
             </div>
