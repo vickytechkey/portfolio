@@ -54,7 +54,7 @@ function RowThree() {
                   fontFamily: ["Poppins", "sans-serif"],
                 }}
               >
-                Amazon Software Support Engineer- I 2019 to 2022
+                Amazon Software Support Engineer- I 2021 to 2022
               </h5>
             </div>
           </div>
@@ -76,7 +76,7 @@ function RowThree() {
                   fontFamily: ["Poppins", "sans-serif"],
                 }}
               >
-                Amazon Software Support Engineer- 2022 to present
+                Amazon Software Support Engineer 2 - 2023 to present
               </h5>
             </div>
           </div>

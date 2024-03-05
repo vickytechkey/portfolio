@@ -4,7 +4,7 @@ export default function journeystatic() {
     {
       companylogo: amazonlogo,
       description:
-        "From October 2019 I had started my career as support software engineer in amazon music team",
+        "From October 2021 I had started my career as support software engineer in amazon music team",
     },
     {
       companylogo: amazonlogo,
