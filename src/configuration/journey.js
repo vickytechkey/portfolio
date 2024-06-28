@@ -4,12 +4,12 @@ export default function journeystatic() {
     {
       companylogo: amazonlogo,
       description:
-        "From October 2021 I had started my career as support software engineer in amazon music team",
+        "From October 2021 I had started my career as Application software engineer in amazon music team",
     },
     {
       companylogo: amazonlogo,
       description:
-        "On April 2023 , I got promoted as Support software engineer - II and owned compliance goal (software security assesment)  in amazon music team",
+        "On April 2023 , I got promoted as Application software engineer - II and owned compliance goal (software security assesment)  in amazon music team",
     },
 
     // {
