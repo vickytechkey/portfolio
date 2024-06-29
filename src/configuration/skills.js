@@ -7,26 +7,29 @@ import Python from "../assets/homepage/skills/python.svg";
 import ReactJs from "../assets/homepage/skills/reactjs.svg";
 import Spark from "../assets/homepage/skills/spark.svg";
 import Scikit from "../assets/homepage/skills/scikitlearn.svg";
-// import pytorch from 
-// import seaborn from
-// import pandas from
-// import etl from
-// import apacheairflow from
-// import pyspark from
-// import rag from
-// import genai from
+import pytorch from "../assets/homepage/skills/pytorch.svg"
+import pandas from "../assets/homepage/skills/Pandas.svg"
+import etl from "../assets/homepage/skills/etl.svg"
+import apacheairflow from "../assets/homepage/skills/Apache Airflow.svg"
+import genai from "../assets/homepage/skills/artificial-intelligence-ai-icon.svg"
 export default function skillsarray() {
   const logos = [
     "br",
     Scikit,
+    pytorch,
+    pandas,
+    etl,
+    apacheairflow,
+    genai,
+    "br",
+    Spark,
+    Python,
     Angular,
     Java,
     Flutter,
     NodeJs,
-    ReactJs,
     "br",
-    Python,
-    Spark,
+    ReactJs,
   ];
   return logos;
 }
