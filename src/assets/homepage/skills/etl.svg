@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/>
+  <use transform="matrix(1, 0, 0, 1, 419.551636, 0.56881)" style="transform-box: fill-box;" xlink:href="#A"/>
+  <symbol id="A" overflow="visible">
+    <g stroke="none" style="" transform="matrix(2.90689, 0, 0, 2.96025, -366.616913, 0)">
+      <path d="M34.863 75.472L14.539 39.86 0 75.885l20.652.083 14.211-.495z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M35 75.5zm-1.548-.059L15 73.868V39l20.017 5.472v31.12z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M0 76l15-2.165V39L0 46.448V76z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M92.86 69.898l-19.792 1.672-21.916-1.547 21.916-56.123L92.86 69.898z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M93 70l-20-2.328V0l20 10.767V70z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M51 70l22-2.312V0L51 10.855V70z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M143.982 74.773L129.5 51.75l-19.475 23.061 14.289.657 19.668-.695z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M143.965 74zm-1.277.563l-12.75-1.779V51l14.063 4.614v19.145z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M110 74.75l20-1.915L129.998 51 110 54.539V74.75z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M94.154 141.242l-20.54-6.396-21.378 6.396 21.392 18.059 20.526-18.059z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M52 141l21 7.223V174l-21-10.929V141z" style="fill: rgb(114, 0, 234);"/>
+      <path d="M94 141l-21 7.223V174l21-10.929V141z" style="fill: rgb(114, 0, 234);"/>
+    </g>
+    <g stroke="none" style="" transform="matrix(2.936042, 0, 0, 2.991943, -370.815063, -2.788981)">
+      <path d="M143.996 88.019zM144 88l-70.972.026L73 130l71-18.375" style="fill: rgb(128, 1, 248);"/>
+      <path d="M1 88l72 .026L72.969 130 1 111.629z" style="fill: rgb(128, 1, 248);"/>
+    </g>
+  </symbol>
+</svg>

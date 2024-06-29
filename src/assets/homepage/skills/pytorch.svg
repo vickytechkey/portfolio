@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs/>
+  <g transform="matrix(17.794558, 0, 0, 15.760921, -346.689148, 12.20407)" fill="#ee4c2c" style="">
+    <path d="M40.8 9.3l-2.1 2.1c3.5 3.5 3.5 9.2 0 12.7s-9.2 3.5-12.7 0-3.5-9.2 0-12.7l5.6-5.6.7-.8V.8l-8.5 8.5a11.89 11.89 0 0 0 0 16.9 11.89 11.89 0 0 0 16.9 0c4.8-4.7 4.8-12.3.1-16.9z" style="paint-order: fill; fill: rgb(87, 40, 192);"/>
+    <circle r="1.6" cy="7.1" cx="36.6" style="paint-order: fill; fill: rgb(87, 40, 192);"/>
+  </g>
+</svg>
