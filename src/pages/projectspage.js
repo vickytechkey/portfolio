@@ -24,7 +24,9 @@ function ProjectPage() {
                   <div className="card" >
                     <div className="card-image">
                     <Link to={project_link}>
-                      <img  src={x['projectImage']} className="responsive-img" />
+                    {/* className="responsive-img" */}
+                    {/* style={{ width: '300px' , height:'300px' }}  */}
+                      <img  src={x['projectImage']} style={{ width: '200px' , height:'200px' }}  />
                       </Link>
                     </div>
                     <div className="card-content">

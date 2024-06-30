@@ -55,7 +55,7 @@ function Projects() {
                   <div className="card" >
                     <div className="card-image">
                     <Link to={x["projectLink"]}>
-                      <img src={x["projectLogo"]} className="responsive-img" />
+                      <img src={x["projectLogo"]} style={{ width: '200px' , height:'200px' }} />
                       </Link>
                     </div>
                     <div className="card-content">

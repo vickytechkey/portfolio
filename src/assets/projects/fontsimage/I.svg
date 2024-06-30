@@ -1,0 +1,6 @@
+<svg width="88.16562499999999px" height="242px" xmlns="http://www.w3.org/2000/svg" viewBox="205.9171875 -46 88.16562499999999 242" style="background: rgba(0, 0, 0, 0);" preserveAspectRatio="xMidYMid"><defs><linearGradient id="editing-gradow-gradient" x1="0" x2="1" y1="0.5" y2="0.5" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#6600ff"></stop><stop offset="1" stop-color="#6600ff"></stop></linearGradient><filter id="editing-gradow-filter" x="-100%" y="-100%" width="300%" height="300%"><feFlood flood-color="#ffffff" result="flood"></feFlood><feComposite operator="in" in2="SourceAlpha" in="flood" result="shadow"></feComposite><feOffset dx="-4" dy="-4" in="SourceGraphic" result="offset-1"></feOffset><feOffset dx="4" dy="4" in="shadow" result="offset-2"></feOffset><feMerge><feMergeNode in="offset-2"></feMergeNode><feMergeNode in="offset-1"></feMergeNode></feMerge></filter></defs><g filter="url(#editing-gradow-filter)"><g transform="translate(224.87001049518585, 121.19999885559082)"><path d="M31.36 0L0.84 0L18.62-92.40L49.42-92.40L31.36 0Z" fill="url(#editing-gradow-gradient)"></path></g></g><style>text {
+  font-size: 64px;
+  font-family: Arial Black;
+  dominant-baseline: central;
+  text-anchor: middle;
+}</style></svg>

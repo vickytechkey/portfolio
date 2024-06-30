@@ -1,25 +1,36 @@
-import grcimage from '../assets/projects/topprojects/compliancemanager500.png'
-import al2migration from '../assets/projects/topprojects/al2migration500.png'
-import patchmamager from '../assets/projects/topprojects/ospatching500.png'
-import customerticketimage from '../assets/projects/topprojects/customerticket500.png'
-import projectsandtwitch from '../assets/projects/topprojects/sandtwitch500.png'
-import s3costoptimisation from '../assets/projects/topprojects/s3500.png'
-import sasrisk from '../assets/projects/sasrisk500.png'
-import complianceaudit from '../assets/projects/grcaudit500.png'
-import djsschedule from '../assets/projects/djsscheduler500.png'
-import pipelinefailure from '../assets/projects/pipelinefailure500.png'
-import acemsengine from '../assets/projects/acemsengine500.png'
-import grcticketaudit from '../assets/projects/grcaudit500.png'
-import grcweb from '../assets/projects/grcweb500.png'
-import codereview from '../assets/projects/codereviews500.png'
-import auditingl3 from '../assets/projects/auditingdart500.png'
-import training from '../assets/projects/training500.png'
+import a from '../assets/projects/fontsimage/A.svg'
+import b from '../assets/projects/fontsimage/B.svg'
+import c from '../assets/projects/fontsimage/C.svg'
+import d from '../assets/projects/fontsimage/D.svg'
+import e from '../assets/projects/fontsimage/E.svg'
+import f from '../assets/projects/fontsimage/F.svg'
+import g from '../assets/projects/fontsimage/G.svg'
+import h from '../assets/projects/fontsimage/H.svg'
+import i from '../assets/projects/fontsimage/I.svg'
+import j from '../assets/projects/fontsimage/J.svg'
+import k from '../assets/projects/fontsimage/K.svg'
+import l from '../assets/projects/fontsimage/L.svg'
+import m from '../assets/projects/fontsimage/M.svg'
+import n from '../assets/projects/fontsimage/N.svg'
+import o from '../assets/projects/fontsimage/O.svg'
+import p from '../assets/projects/fontsimage/P.svg'
+import q from '../assets/projects/fontsimage/Q.svg'
+import r from '../assets/projects/fontsimage/R.svg'
+import s from '../assets/projects/fontsimage/S.svg'
+import t from '../assets/projects/fontsimage/T.svg'
+import u from '../assets/projects/fontsimage/U.svg'
+import v from '../assets/projects/fontsimage/V.svg'
+import w from '../assets/projects/fontsimage/W.svg'
+import x from '../assets/projects/fontsimage/X.svg'
+import y from '../assets/projects/fontsimage/Y.svg'
+import z from '../assets/projects/fontsimage/Z.svg'
+
 export default function AllProjectarray() {
     const allprojects = [
       {
         "al2migration" : {
           "projectName" : "AL2 Migration",
-          "projectImage" : al2migration,
+          "projectImage" : a,
           "projectdescription" : {
           "intro" : `
           In 2021, a host owned by Paper was running with the Amazon Linux 2012 OS. Running an outdated OS leads to security issues. To fix the issue, an Amazon-wide AL2 migration campaign was planned in 2021, with the plan to migrate all instances from AL2012 to AL2 before March 2022.
@@ -36,7 +47,7 @@ export default function AllProjectarray() {
         },
   "djsautomationforacems" : {
           "projectName" : "DJS job for MusicRoyaltiesAcems",
-          "projectImage" : djsschedule,
+          "projectImage" : d,
           "projectdescription" : {
           "intro" : `
           Our paper team receives daily severity-3 tickets from the MusicRoyaltiesAcems engine to clear the customer data for all three regions: FE,EU, and NA. The SLA for the ticket is 48 hours. Due to this, we need to spend 30 minutes on each ticket (3 tickets per day) and run the DJS job to clear data for both Adult and Child customers manually. In total, we need 90 minutes to resolve this daily task.
@@ -53,7 +64,7 @@ export default function AllProjectarray() {
 
         "s3costoptimisationproject" : {
           "projectName" : "S3 cost Optimisation",
-          "projectImage" : s3costoptimisation,
+          "projectImage" : s,
           "projectdescription" : {
           "intro" : `
           In our paper organization, we’re storing a lot of customer and organizational data in our S3 bucket, which makes the S3 bucket resource more expensive. To save on unnecessary expenses, I conducted a S3 bucket campaign that located the high-storage S3 bucket without a lifecycle policy and cut tickets to the respective team.
@@ -69,7 +80,7 @@ export default function AllProjectarray() {
         },
           "projectsandwihch" : {
           "projectName" : "Project Sandwich",
-          "projectImage" : projectsandtwitch,
+          "projectImage" : p,
           "projectdescription" : {
           "intro" : `
           This project aims to migrate our c/m/i 1, 2, 3, or 4 series capacity in IAD/PDX to power-efficient current generation (6g/5/6i) instance types. The preferred migration strategy is to use Icelake (c6i, m61, and r61) for C and M family migrations and to utilize i3en and i4i for music platform migrations.
@@ -83,9 +94,25 @@ export default function AllProjectarray() {
 
           }
         },
+       "grccomplianceaudit" : {
+          "projectName" : "GRC compliance audit",
+          "projectImage" : c,
+          "projectdescription" : {
+          "intro" : `
+          We received tickets from the GRC team whenever changes happened to AWS resources through the console. This ticket helps the GRC team audit and capture justification for the changes made through the console. The pain point in this ticket is that the GRC portal won’t give details of the user who made the changes; we need to locate the user manually. To get the user data, we reached out to GRC on-call initially and got user data from them through email or Slack, which will take 1-3 business days to get a response from on-call. Then, we needed to reach out to the user who made the changes and will resolve the ticket once we get justification from the user.
+          `,
+          "behave" : `
+          I explored AWS and found a solution to locate the user details for S3 violations using event source and dynamoDB violations using resource name.
+          `,
+          "impact" : `
+          By implementing this solution, there is no need to contact GRC on-call for user data. Also, since we’re locating user data ourselves and we can resolve the GRC ticket before SLA.
+          `
+
+          }
+        },
         "patchmanagershephered" : {
           "projectName" : "Patch Manager for Shepherd risk",
-          "projectImage" : patchmamager,
+          "projectImage" : p,
           "projectdescription" : {
           "intro" : `
       Our paper team received tickets from the shepherd team to update the EC2 instance operating system, which was running with risk software. This risky software had a direct impact on our security vulnerabilities. To resolve the shepherd risks, we need to login to the host and update the software through the terminal with the bash command. Doing this manually will require us to spend 30–60 minutes on each host to run all commands on that host manually.
@@ -100,27 +127,10 @@ export default function AllProjectarray() {
 
           }
         },
-
-        "grccomplianceaudit" : {
-          "projectName" : "GRC compliance audit",
-          "projectImage" : complianceaudit,
-          "projectdescription" : {
-          "intro" : `
-          We received tickets from the GRC team whenever changes happened to AWS resources through the console. This ticket helps the GRC team audit and capture justification for the changes made through the console. The pain point in this ticket is that the GRC portal won’t give details of the user who made the changes; we need to locate the user manually. To get the user data, we reached out to GRC on-call initially and got user data from them through email or Slack, which will take 1-3 business days to get a response from on-call. Then, we needed to reach out to the user who made the changes and will resolve the ticket once we get justification from the user.
-          `,
-          "behave" : `
-          I explored AWS and found a solution to locate the user details for S3 violations using event source and dynamoDB violations using resource name.
-          `,
-          "impact" : `
-          By implementing this solution, there is no need to contact GRC on-call for user data. Also, since we’re locating user data ourselves and we can resolve the GRC ticket before SLA.
-          `
-
-          }
-        },
  
         "addresssasrisk" : {
           "projectName" : "Addressed SAS Risk",
-          "projectImage" : sasrisk,
+          "projectImage" : s,
           "projectdescription" : {
           "intro" : `
           Paper org had 500+ risks in the dashboard in the month of January 2019, all of which were created in SAS since the paper arg system was consuming outdated and depreciated software.
@@ -136,7 +146,7 @@ export default function AllProjectarray() {
         },
         "grccompliancemanager" : {
           "projectName" : "GRC compliance Manager",
-          "projectImage" : grcweb,
+          "projectImage" : g,
           "projectdescription" : {
           "intro" : `
           Our team receives compliance tickets from the GRC team whenever changes are made to AWS resources through the console. The purpose of the ticket is to capture the user details and justification for the changes made through the console. For each and every violation, we need to reach out to the user and get justification for the changes.
@@ -152,7 +162,7 @@ export default function AllProjectarray() {
         },
         "pipelinefailure" : {
           "projectName" : "Pipeline failure tickets sev2",
-          "projectImage" : pipelinefailure,
+          "projectImage" : p,
           "projectdescription" : {
           "intro" : `
           RoyaltiesOps (SFO) receives the sev 2 tickets from royalties. When the jobs fail in OmniDashBoard to notify us, the system cuts an auto-cut ticket to notify us. The royalties dataset is the source for all jobs reporting and publishing jobs. The SLA for the ticket is 24 hours.
@@ -166,26 +176,11 @@ export default function AllProjectarray() {
 
           }
         },
-"ospatchingproject" : {
-          "projectName" : "Patch Manager",
-          "projectImage" : patchmamager,
-          "projectdescription" : {
-          "intro" : `
-          we received lot of shepherd risk for the EC2 instance, for large number of instance we use patch manager but if there no unique tag across the instance, we need to add the instance each and every one manually after locating the instance id using the IP address. This makes the current process more complicated and we need spend time to add each and every instance manually.Also if any one or two instance had different tags, there is chance we might miss the instance and risk will remain open till all instance get patched
-          `,
-          "behave" : `
-          I had created two python scripts, which we can run from our local system one script help us to identify the instance id using  ip address and stored the instance id in the csv file, and other script help us to run the patch manager for bulk of instance bases on instance id
-          `,
-          "impact" : `
-          Since the command running in the instance on basis of instance id along with saving time  through scripts, this won’t miss instance and risk closed  within next 48 hours which help us to close the ticket before SLA
-          `
 
-          }
-        },
   
          "customerticket" : {
           "projectName" : "Customer Tickets",
-          "projectImage" : customerticketimage,
+          "projectImage" : c,
           "projectdescription" : {
           "intro" : `
           we often receive payment related queries from vendors through Optimus - Nightingale Music Queue, this tickets are high priority  ticket as this tickets had direct impact on customer. From July 2022 we had received high number of customer tickets with missing report and payment discrepancy
@@ -199,9 +194,25 @@ export default function AllProjectarray() {
 
           }
         },
+        "ospatchingproject" : {
+          "projectName" : "Patch Manager",
+          "projectImage" : p,
+          "projectdescription" : {
+          "intro" : `
+          we received lot of shepherd risk for the EC2 instance, for large number of instance we use patch manager but if there no unique tag across the instance, we need to add the instance each and every one manually after locating the instance id using the IP address. This makes the current process more complicated and we need spend time to add each and every instance manually.Also if any one or two instance had different tags, there is chance we might miss the instance and risk will remain open till all instance get patched
+          `,
+          "behave" : `
+          I had created two python scripts, which we can run from our local system one script help us to identify the instance id using  ip address and stored the instance id in the csv file, and other script help us to run the patch manager for bulk of instance bases on instance id
+          `,
+          "impact" : `
+          Since the command running in the instance on basis of instance id along with saving time  through scripts, this won’t miss instance and risk closed  within next 48 hours which help us to close the ticket before SLA
+          `
+
+          }
+        },
         "musicroyaltiesacems" : {
           "projectName" : "MusicRoyalties ACEMS engine tickets",
-          "projectImage" : acemsengine,
+          "projectImage" : a,
           "projectdescription" : {
           "intro" : `
           The paper team receive daily severity-3 tickets from MusicRoyaltiesAcems engine to clear the customer data, for all three regions FE,EU, and NA each tickets for each region. The SLA of the ticket is 48 hrs
@@ -218,7 +229,7 @@ export default function AllProjectarray() {
         },
         "grctickethandling" : {
           "projectName" : "GRC compliance Ticket handling",
-          "projectImage" : grcticketaudit,
+          "projectImage" : g,
           "projectdescription" : {
           "intro" : `
           We received compliance ticket from GRC team, whenever the changes made in AWS account through console owned by paper team, GRC team creating team to capture the justification and record user details who made changes through the console.
@@ -237,7 +248,7 @@ export default function AllProjectarray() {
         },
         "codereviews" : {
           "projectName" : "Code Reviews ",
-          "projectImage" : codereview,
+          "projectImage" : c,
           "projectdescription" : {
           "intro" : `
           PaperOps (Chennai Team) is responsible for various tasks like SAS risk, shepherd and handling of customer tickets, to complete the task sometime we need to make code changes.
@@ -261,7 +272,7 @@ export default function AllProjectarray() {
         },
         "providingkttose1" : {
           "projectName" : "Providing KT to SE - 1",
-          "projectImage" : training,
+          "projectImage" : t,
           "projectdescription" : {
           "intro" : `
           As a part of the hiring process, we hired 25 engineers who are new to Amazon technology and initially faced some issues handling tasks.          `,

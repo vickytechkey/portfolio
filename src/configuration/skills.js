@@ -36,3 +36,5 @@ export default function skillsarray() {
 
 // color code #6600FF
 //size 1024 X 1024
+
+// text generator : https://maketext.io/

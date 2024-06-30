@@ -1,9 +1,29 @@
-import grcimage from '../assets/projects/topprojects/compliancemanager500.png'
-import ospatching from '../assets/projects/topprojects/ospatching500.png'
-import customerticket from '../assets/projects/topprojects/customerticket500.png'
-import projectsandswitch from '../assets/projects/topprojects/sandtwitch500.png'
-import s3costoptimise from '../assets/projects/topprojects/s3500.png'
-import al2migration from '../assets/projects/topprojects/al2migration500.png'
+import a from '../assets/projects/fontsimage/A.svg'
+import b from '../assets/projects/fontsimage/B.svg'
+import c from '../assets/projects/fontsimage/C.svg'
+import d from '../assets/projects/fontsimage/D.svg'
+import e from '../assets/projects/fontsimage/E.svg'
+import f from '../assets/projects/fontsimage/F.svg'
+import g from '../assets/projects/fontsimage/G.svg'
+import h from '../assets/projects/fontsimage/H.svg'
+import i from '../assets/projects/fontsimage/I.svg'
+import j from '../assets/projects/fontsimage/J.svg'
+import k from '../assets/projects/fontsimage/K.svg'
+import l from '../assets/projects/fontsimage/L.svg'
+import m from '../assets/projects/fontsimage/M.svg'
+import n from '../assets/projects/fontsimage/N.svg'
+import o from '../assets/projects/fontsimage/O.svg'
+import p from '../assets/projects/fontsimage/P.svg'
+import q from '../assets/projects/fontsimage/Q.svg'
+import r from '../assets/projects/fontsimage/R.svg'
+import s from '../assets/projects/fontsimage/S.svg'
+import t from '../assets/projects/fontsimage/T.svg'
+import u from '../assets/projects/fontsimage/U.svg'
+import v from '../assets/projects/fontsimage/V.svg'
+import w from '../assets/projects/fontsimage/W.svg'
+import x from '../assets/projects/fontsimage/X.svg'
+import y from '../assets/projects/fontsimage/Y.svg'
+import z from '../assets/projects/fontsimage/Z.svg'
 export default function TopProjectarray() {
     const topprojects_array = [
 
@@ -15,7 +35,7 @@ export default function TopProjectarray() {
         {
         projectid : "00",
         projectTitle : "GRC Compliance Manager",
-        projectLogo : grcimage,
+        projectLogo : g,
         projectLink : "/projectsdetail?name=grccompliancemanager"
     },
     {
@@ -25,7 +45,7 @@ export default function TopProjectarray() {
     {
     projectid : "01",
     projectTitle : "OS Patching",
-    projectLogo : ospatching,
+    projectLogo : o,
     projectLink : "/projectsdetail?name=ospatchingproject"
 },
 {
@@ -35,7 +55,7 @@ export default function TopProjectarray() {
 {
 projectid : "02",
 projectTitle : "Customer Tickets",
-projectLogo : customerticket,
+projectLogo : c,
 projectLink : "/projectsdetail?name=customerticket"
 },
 {
@@ -48,7 +68,7 @@ projectLink : "/projectsdetail?name=customerticket"
 {
 projectid : "03",
 projectTitle : "Project Sandswitch",
-projectLogo : projectsandswitch,
+projectLogo : p,
 projectLink : "/projectsdetail?name=projectsandwihch"
 },
 {
@@ -57,7 +77,7 @@ projectLink : "/projectsdetail?name=projectsandwihch"
 {
     projectid : "04",
     projectTitle : "AL2 Migration",
-    projectLogo : al2migration,
+    projectLogo : a,
     projectLink : "/projectsdetail?name=al2migration"
     },
     {
@@ -66,7 +86,7 @@ projectLink : "/projectsdetail?name=projectsandwihch"
     {
         projectid : "05",
         projectTitle : "S3 Cost Optimisation",
-        projectLogo : s3costoptimise,
+        projectLogo : s,
         projectLink : "/projectsdetail?name=s3costoptimisationproject"
         },
 
