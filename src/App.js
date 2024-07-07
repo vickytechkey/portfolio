@@ -10,6 +10,8 @@ import FooterBar from "./webcomponents/footer";
 import NavigationBar from "./webcomponents/navbar";
 import Projectdetail from './pages/projectpage/projectdetails'
 import ReferalPage from "./pages/referalform"
+import ApplicationTracker from "./pages/applicationtrackerentry"
+import ApplicationTrackerReader from "./pages/applicationtrackerreader"
 function App() {
   AOS.init();
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/projectsdetail" element={<Projectdetail />} />
         <Route path="/referalform" element={<ReferalPage />} />
+        <Route path="/ats" element={<ApplicationTracker />} />
+        <Route path="/atsreader" element={<ApplicationTrackerReader />} />
       </Routes>
 
       <FooterBar />
