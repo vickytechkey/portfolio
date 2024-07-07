@@ -9,6 +9,7 @@ import ProjectPage from "./pages/projectspage";
 import FooterBar from "./webcomponents/footer";
 import NavigationBar from "./webcomponents/navbar";
 import Projectdetail from './pages/projectpage/projectdetails'
+import ReferalPage from "./pages/referalform"
 function App() {
   AOS.init();
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/projectsdetail" element={<Projectdetail />} />
+        <Route path="/referalform" element={<ReferalPage />} />
       </Routes>
 
       <FooterBar />
