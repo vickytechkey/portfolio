@@ -34,7 +34,7 @@ function ApplicationTracker() {
       };
   
       //saving details in database
-      await setDoc(doc(db, "applicationtracker" , companyname.current.value , jobid.current.value , "data" ), postdatas);
+      await setDoc(doc(db, "applicationtracker" ,  jobid.current.value ,companyname.current.value  , "data" ), postdatas);
       updatesubmitstate((prevstate) => {
         return { ...prevstate, showpreloader: false, showmessage: true , showform: true};
       });
