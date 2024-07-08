@@ -34,9 +34,14 @@ function ApplicationTracker() {
       };
 
       let jobuniqueid = companyname.current.value +"_"+ String(jobid.current.value)
+      var today = new Date();
+      var year = today.getFullYear();
+      var mes = today.getMonth()+1;
+      var dia = today.getDate();
+      var fecha ="F"+String(dia)+String(mes)+String(year);
   
       //saving details in database
-      await setDoc(doc(db, "applicationtracker" ,  jobuniqueid), postdatas);
+      await setDoc(doc(db, "applicationtracker" , "appliedjobs" , fecha,jobuniqueid), postdatas);
       updatesubmitstate((prevstate) => {
         return { ...prevstate, showpreloader: false, showmessage: true , showform: true};
       });
