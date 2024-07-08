@@ -24,9 +24,12 @@ function ApplicationTrackerReader() {
         return { ...prevstate, showform: false, showpreloader: true };
       });
       event.preventDefault();
+
+      let jobuniqueid = companyname.current.value +"_"+ String(jobid.current.value)
+
   
       //saving details in database
-      const docRef = doc(db, "applicationtracker" , companyname.current.value , jobid.current.value , "data" );
+      const docRef = doc(db, "applicationtracker" , jobuniqueid );
       const docSnap = await getDoc(docRef);
      
       if (docSnap.exists()) {
@@ -84,7 +87,7 @@ function ApplicationTrackerReader() {
                     onClick={(e) => formsubmit(e)}
                     className="waves-effect  deep-purple darken-4 btn"
                   >
-                    Upload Data
+                    Search Data
                   </button>
                 </div>
               </div>
