@@ -41,7 +41,7 @@ function ApplicationTracker() {
       var fecha ="F"+String(dia)+String(mes)+String(year);
   
       //saving details in database
-      await setDoc(doc(db, "applicationtracker" , "appliedjobs" , fecha,jobuniqueid), postdatas);
+      await setDoc(doc(db, "applicationtracker" , String(dia) , String(dia),jobuniqueid), postdatas);
       updatesubmitstate((prevstate) => {
         return { ...prevstate, showpreloader: false, showmessage: true , showform: true};
       });
