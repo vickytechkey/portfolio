@@ -6,8 +6,6 @@ import M from "materialize-css";
 import AppConfiguration from "../configuration/mainconfiguration";
 function NavigationBar() {
   let appconfig = new AppConfiguration();
-
-  let resumeurl = appconfig.Resumeurl.toString();
   //  let cvurl = appconfig.CVurls.toString()
 
   function trigger() {
@@ -18,8 +16,7 @@ function NavigationBar() {
   const routes = [
     { path: "/", label: "Home" },
     { 'path': "/projects", 'label': 'My works' },
-    { path: "/about", label: "About myself" },
-    // { path: "/contact", label: "Say Hello" },
+    { path: "/about", label: "About myself" }
   ];
   return (
     <React.Fragment>
