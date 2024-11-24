@@ -1,28 +1,74 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import CircularChart from './leetcodescore';
 
-const Leetscore = () => {
+const LeetCodeScoreCard = () => {
+  const [stats, setStats] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const response = await axios.get('https://leetcode-stats-api.herokuapp.com/vichunice');
+        setStats(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to fetch LeetCode stats');
+        setLoading(false);
+      }
+    };
+
+    fetchStats();
+  }, []);
+
+  if (loading) return <div className="center-align">Loading...</div>;
+  if (error) return <div className="center-align red-text">{error}</div>;
+
   return (
     <div className="container">
-    <div className="row">
-      <div className="col s12"> 
-        <h2 className="center-align" style={{ fontWeight: 600, fontFamily: ["Poppins", "sans-serif"]  }}>My LeetCode</h2>
-        <h2 className="center-align" style={{ fontWeight: 600, fontFamily: ["Poppins", "sans-serif"] }}>Score Card</h2>
+      <div className="row">
+        <div className="col s12">
+          <h2 className="center-align">LeetCode Score Card</h2>
+        </div>
       </div>
+      {stats && (
+        <>
+          <div className="row">
+            <div className="col s12 center-align">
+              <h4>Total Solved: {stats.totalSolved} / {stats.totalQuestions}</h4>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s12 m4">
+              <CircularChart 
+                label="Easy" 
+                completed={stats.easySolved} 
+                total={stats.totalEasy} 
+                color="#4CAF50" 
+              />
+            </div>
+            <div className="col s12 m4">
+              <CircularChart 
+                label="Medium" 
+                completed={stats.mediumSolved} 
+                total={stats.totalMedium} 
+                color="#FFC107" 
+              />
+            </div>
+            <div className="col s12 m4">
+              <CircularChart 
+                label="Hard" 
+                completed={stats.hardSolved} 
+                total={stats.totalHard} 
+                color="#F44336" 
+              />
+            </div>
+          </div>
+        </>
+      )}
     </div>
-    <div className="row">
-      <div className="col s12 m4">
-        <CircularChart label="Easy" completed={79} total={839} color="#4CAF50" />
-      </div>
-      <div className="col s12 m4">
-        <CircularChart label="Medium" completed={27} total={1760} color="#FFC107" />
-      </div>
-      <div className="col s12 m4">
-        <CircularChart label="Hard" completed={2} total={768} color="#F44336" />
-      </div>
-    </div>
-  </div>
   );
 };
 
-export default Leetscore;
+export default LeetCodeScoreCard;
