@@ -10,6 +10,7 @@ const LeetCodeScoreCard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
+
         const response = await axios.get('https://alfa-leetcode-api.onrender.com/vichunice/solved');
         setStats(response.data);
         setLoading(false);
@@ -36,7 +37,10 @@ const LeetCodeScoreCard = () => {
         <>
           <div className="row">
             <div className="col s12 center-align">
+
               <h4>Total Solved: {stats.solvedProblem} / 3368</h4>
+
+
             </div>
           </div>
           <div className="row">
@@ -44,7 +48,9 @@ const LeetCodeScoreCard = () => {
               <CircularChart 
                 label="Easy" 
                 completed={stats.easySolved} 
+
                 total={839} 
+
                 color="#4CAF50" 
               />
             </div>
@@ -52,7 +58,9 @@ const LeetCodeScoreCard = () => {
               <CircularChart 
                 label="Medium" 
                 completed={stats.mediumSolved} 
+
                 total={1760} 
+
                 color="#FFC107" 
               />
             </div>
@@ -60,7 +68,10 @@ const LeetCodeScoreCard = () => {
               <CircularChart 
                 label="Hard" 
                 completed={stats.hardSolved} 
+
                 total={769}
+
+
                 color="#F44336" 
               />
             </div>
