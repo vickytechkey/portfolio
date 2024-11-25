@@ -9,7 +9,6 @@ import Leetscore from "./home/leetscoremain"
 
 import GifGallery from "./leetcodebadge/gifcompo"
 
-
 function HomePage() {
   AOS.init();
   return (
