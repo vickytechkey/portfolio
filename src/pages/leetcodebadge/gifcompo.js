@@ -1,9 +1,13 @@
 import React from 'react';
 import ResponsiveGif from './gifcomponent';
 import top50sql from './asset/Top_SQL_50.gif'
+import day50badge from './asset/day50.gif'
+import advancesql50 from './asset/advancesql50.jpeg'
 const GifGallery = () => {
   const gifs = [
-    { src: top50sql, alt: 'Description 1' }
+    { src: top50sql, alt: 'Description 1' },
+    { src: day50badge, alt: 'Description 1' },
+    { src: advancesql50, alt: 'Description 1' }
     // Add more GIFs as needed
   ];
 
