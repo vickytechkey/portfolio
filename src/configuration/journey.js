@@ -1,15 +1,21 @@
 import amazonlogo from "../assets/homepage/AmazonLogo.svg";
+import citilogo from "../assets/homepage/citi.svg";
 export default function journeystatic() {
   const jobdetails = [
-    {
-      companylogo: amazonlogo,
+   {
+      companylogo: citilogo,
       description:
-        "From October 2021 I had started my career as Application engineer in amazon music team",
+        "In June 2025, I joined Citi Bank through LTIMindtree as a Data Engineer and took on a leadership role for the Lending and Mortgage team.",
     },
     {
       companylogo: amazonlogo,
       description:
-        "On April 2023 , I got promoted as Application engineer - II and owned compliance goal (software security assesment)  in amazon music team",
+        "In April 2023 , I got promoted as Application engineer - II and owned compliance goal (software security assesment)  in amazon music team",
+    },
+     {
+      companylogo: amazonlogo,
+      description:
+        "From October 2018 I had started my career as Application engineer - I in amazon music team",
     },
 
     // {
