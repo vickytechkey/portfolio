@@ -14,7 +14,7 @@ function HomePage() {
   return (
     <React.Fragment>
       <IntroRow />
-      <Leetscore/>
+      {/* <Leetscore/> */}
       <GifGallery/>
       <Skills />
       <Journey />
