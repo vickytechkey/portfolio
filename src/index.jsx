@@ -6,9 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import AppConfiguration from "./configuration/mainconfiguration";
 import "hover.css/css/hover.css";
-import { Buffer } from "buffer";
 
-window.Buffer = Buffer;
 
 const appconfig = new AppConfiguration();
 const app = initializeApp(appconfig.firebaseHostConfig);
