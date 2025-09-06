@@ -1,13 +1,14 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000, // Optional: same as CRA default
+    port: 3000
   },
   test: {
-    globals: true,         // Enables test(), expect(), describe(), etc. globally
-    environment: 'jsdom',  // Needed for React testing
-  },
+    globals: true,          // enable test(), expect() without import
+    environment: 'jsdom',   // needed for React DOM testing
+    setupFiles: './src/setupTests.js' // optional: if you want global setup
+  }
 });
