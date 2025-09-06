@@ -1,0 +1,7 @@
+    category    | account_count 
+----------------+---------------
+ Average Salary |             0
+ Low Salary     |             1
+ High Salary    |             3
+(3 rows)
+

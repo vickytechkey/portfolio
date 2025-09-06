@@ -5,17 +5,18 @@ import AOS from "aos/dist/aos";
 import "aos/dist/aos.css";
 import Projects from './home/projects';
 import Journey from "./home/journey";
-import Leetscore from "./home/leetscoremain"
+
 
 import GifGallery from "./leetcodebadge/gifcompo"
+import CertificationGallery  from "./certifications/certification_compo"
 
 function HomePage() {
   AOS.init();
   return (
     <React.Fragment>
       <IntroRow />
-      {/* <Leetscore/> */}
-      <GifGallery/>
+      <CertificationGallery />
+      <GifGallery />
       <Skills />
       <Journey />
       <Projects/>
