@@ -1,0 +1,38 @@
+name: Weekly Dependency Update
+
+# Trigger the workflow every Sunday at 6 AM IST (00:30 UTC)
+on:
+  schedule:
+    - cron: '30 0 * * 0'  # Every Sunday at 00:30 UTC → 6:00 AM IST
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # Change this to your Node.js version
+
+      # Install current dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Update dependencies
+      - name: Update dependencies
+        run: npm update
+
+      # Commit and push updates if any
+      - name: Commit and push updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+          git diff --staged --quiet || git commit -m "chore: weekly dependency update"
+          git push
