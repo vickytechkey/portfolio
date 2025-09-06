@@ -6,4 +6,8 @@ export default defineConfig({
   server: {
     port: 3000, // Optional: same as CRA default
   },
+  test: {
+    globals: true,         // Enables test(), expect(), describe(), etc. globally
+    environment: 'jsdom',  // Needed for React testing
+  },
 });
