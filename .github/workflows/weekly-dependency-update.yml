@@ -2,6 +2,7 @@ name: Weekly Dependency Update
 
 # Trigger the workflow every Sunday at 6 AM IST (00:30 UTC)
 on:
+  workflow_dispatch:  # allows manual trigger
   schedule:
     - cron: '30 0 * * 0'  # Every Sunday at 00:30 UTC → 6:00 AM IST
 
