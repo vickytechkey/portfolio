@@ -1,12 +1,10 @@
-name: Dependency Update & Security Fix
+name: Weekly Dependency Update
 
-# Trigger manually, weekly, and when security alerts are created
+# Trigger the workflow every Sunday at 6 AM IST (00:30 UTC)
 on:
-  workflow_dispatch:   # manual trigger
+  workflow_dispatch:  # allows manual trigger
   schedule:
-    - cron: '30 0 * * 0'  # Sunday 00:30 UTC → 6:00 AM IST
-  dependabot_alert:
-    types: [created, reopened]  # Trigger when a new vulnerability is detected or reopened
+    - cron: '30 0 * * 0'  # Every Sunday at 00:30 UTC → 6:00 AM IST
 
 jobs:
   update-dependencies:
@@ -21,15 +19,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '22'  # Change this to your Node.js version
 
       # Install current dependencies
       - name: Install dependencies
         run: npm install
-
-      # Try to fix vulnerabilities
-      - name: Audit fix (attempt auto-fix)
-        run: npm audit fix || true
 
       # Update dependencies
       - name: Update dependencies
@@ -43,6 +37,6 @@ jobs:
           git add package.json package-lock.json
           if ! git diff --staged --quiet; then
             COMMIT_DATE=$(date +'%Y-%m-%d')
-            git commit -m "chore: dependency update after vulnerability alert ($COMMIT_DATE)"
+            git commit -m "chore: weekly dependency update ($COMMIT_DATE)"
             git push
           fi
