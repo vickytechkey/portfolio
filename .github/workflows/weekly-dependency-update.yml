@@ -1,4 +1,6 @@
 name: Weekly Dependency Update
+permissions:
+  contents: write
 
 # Trigger the workflow every Sunday at 6 AM IST (00:30 UTC)
 on:
