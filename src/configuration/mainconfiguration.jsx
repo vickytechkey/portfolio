@@ -15,15 +15,7 @@ export default class AppConfiguration {
   linkedin = linkedin;
   email = email;
   twitter = twitter;
-  firebaseHostConfig = {
-    apiKey: "AIzaSyBD7MBF1tvdy0t5yIQLNStbrer5vp6qXPI",
-    authDomain: "vigneshcoinhosting.firebaseapp.com",
-    projectId: "vigneshcoinhosting",
-    storageBucket: "vigneshcoinhosting.appspot.com",
-    messagingSenderId: "830481915833",
-    appId: "1:830481915833:web:6f9377961efbc163b72068",
-    measurementId: "G-MQSGJXKNHT",
-  };
+  firebaseHostConfig = JSON.parse(process.env.secrets.FIREBASE_SERVICE_ACCOUNT_VIGNESHCOINHOSTING_2025);
   constructor(url) {
     this.url = this.locateurl();
   }
