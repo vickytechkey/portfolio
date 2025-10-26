@@ -3,31 +3,46 @@ name: Deploy to Firebase Hosting on PR
 on:
   pull_request:
 
+permissions:
+  contents: read          # allows reading repo contents
+  pull-requests: write    # allows posting PR comments and deployment links
+  id-token: write         # required for Firebase authentication (OIDC)
+  deployments: write      # needed to create preview deployments
+  actions: read           # safe default for reading GitHub Actions metadata
+
 jobs:
   build_and_preview:
     if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # Cache node_modules for faster CI
-      - uses: actions/cache@v3
+      # Cache node_modules for faster builds
+      - name: Cache npm packages
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       # Install dependencies
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
       # Run tests using Vitest
-      - run: npm run test
+      - name: Run tests
+        run: npm run test
 
-      # Build project using Vite
-      - run: npm run build
+      # Build the project using Vite
+      - name: Build project
+        run: npm run build
 
-      # Deploy to Firebase Hosting
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      # Deploy to Firebase Hosting (Preview Channel for PR)
+      - name: Deploy to Firebase Hosting (Preview)
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VIGNESHCOINHOSTING }}
